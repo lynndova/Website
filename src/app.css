@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-dova-red-1: #bf2846;
+	--color-dova-red-2: #b72646;
+	--color-dova-red-3: #af2447;
+	--color-dova-red-4: #a82348;
+
+	--color-dova-orange-1: #e57a30;
+	--color-dova-orange-2: #d66626;
+	--color-dova-orange-3: #c9541c;
+	--color-dova-orange-4: #ba4212;
+
+	--color-dova-yellow-1: #f2c232;
+	--color-dova-yellow-2: #e5ac2b;
+	--color-dova-yellow-3: #d39115;
+	--color-dova-yellow-4: #bf7609;
+
+	--color-dova-lime-1: #70c869;
+	--color-dova-lime-2: #60b555;
+	--color-dova-lime-3: #51a341;
+	--color-dova-lime-4: #499634;
+
+	--color-dova-green-1: #1c9369;
+	--color-dova-green-2: #1b896a;
+	--color-dova-green-3: #197f6b;
+	--color-dova-green-4: #167266;
+
+	--color-dova-teal-1: #1e9aa0;
+	--color-dova-teal-2: #178f91;
+	--color-dova-teal-3: #138985;
+	--color-dova-teal-4: #0e7f77;
+
+	--color-dova-blue-1: #5378bc;
+	--color-dova-blue-2: #506cb7;
+	--color-dova-blue-3: #4c61ad;
+	--color-dova-blue-4: #4856a5;
+
+	--color-dova-purple-1: #9c78bc;
+	--color-dova-purple-2: #8b68ad;
+	--color-dova-purple-3: #815da3;
+	--color-dova-purple-4: #734e96;
+
+	--color-dova-pink-1: #da78bc;
+	--color-dova-pink-2: #c961ac;
+	--color-dova-pink-3: #b6509d;
+	--color-dova-pink-4: #a64492;
+
+	--color-dova-black-1: #262d2d;
+	--color-dova-black-2: #1a2323;
+	--color-dova-black-3: #101919;
+	--color-dova-black-4: #05090a;
+
+	--color-dova-white-1: #f5f6f6;
+	--color-dova-white-2: #e6f0f1;
+	--color-dova-white-3: #d4e6e6;
+	--color-dova-white-4: #afd1d3;
+
+	--color-dova-main-teal: #009e8e;
+	--color-dova-main-bg-purple: #190445;
+	--color-dova-main-bg-black: #040406;
+
+	--color-dova-background: var(--color-dova-black-4);
+	--color-dova-background-secondary: var(--color-dova-black-3);
+	--color-dova-border: var(--color-dova-black-2);
+	--color-dova-disabled: #374347;
+	--color-dova-text: #f6f5fa;
+	--color-dova-text-strong: #ffffff;
+
+	--font-stack:
+		ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+	--font-sans: 'DM Sans Variable', 'Inter Variable', 'Inter', var(--font-stack);
+
+	--animate-pop: pop 0.5s ease-in-out;
+	--animate-focus-pop: focus-pop 0.25s ease-in-out;
+
+	@keyframes pop {
+		0% {
+			transform: scale(0%);
+		}
+		80% {
+			transform: scale(110%);
+		}
+		100% {
+			transform: scale(100%);
+		}
+	}
+
+	@keyframes focus-pop {
+		0% {
+			outline-width: 0rem;
+		}
+		100% {
+			outline-width: 0.25rem;
+		}
+	}
+}
+
+@layer utilities {
+	.button {
+		@apply bg-dova-background-secondary shadow-dova-background-secondary rounded-xl px-4 py-3 text-lg font-extrabold shadow-sm transition active:scale-95 active:shadow-none;
+	}
+
+	button {
+		@apply bg-dova-background-secondary flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border p-2 shadow-2xl transition hover:brightness-125 active:scale-95;
+	}
+
+	.tooltip-spirit {
+		@apply !bg-dova-background-secondary flex flex-col items-center !rounded-lg border text-sm shadow-2xl;
+		.tip:before {
+			@apply !border-b-dova-border mx-[34.5%] mt-[-12px] hidden;
+		}
+	}
+
+	.pixelated {
+		image-rendering: pixelated;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: crisp-edges;
+	}
+
+	.bgimg {
+		mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+		-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+	}
+
+	.cardbg {
+		mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 75%);
+		-webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 75%);
+	}
+
+	a {
+		@apply underline;
+	}
+
+	a,
+	img {
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-drag: none;
+		-webkit-user-drag: none;
+	}
+
+	.md h1 {
+		@apply mb-4 border-b text-3xl font-bold;
+	}
+	.md h2 {
+		@apply my-2 border-b text-2xl font-bold;
+	}
+	.md h3 {
+		@apply mb-4 text-xl font-bold;
+	}
+	.md img {
+		@apply m-0.5 inline-block w-fit max-w-full;
+	}
+	.md p {
+		@apply my-4;
+	}
+	.md strong {
+		@apply font-bold;
+	}
+	.md li {
+		@apply mb-4 ml-8 list-disc;
+	}
+
+	::-webkit-scrollbar {
+		width: 1rem;
+	}
+
+	* {
+		@apply border-dova-border select-none;
+		scrollbar-color: #8400ff #161b1d;
+	}
+
+	h1:not(.md h1) {
+		@apply text-dova-text-strong text-4xl font-black tracking-tighter sm:text-6xl;
+	}
+
+	h2:not(.md h2) {
+		@apply text-dova-text-strong text-4xl font-black tracking-tight;
+	}
+}
+
+html {
+	@apply bg-dova-background text-dova-text h-full;
+}
+
+@tailwind utilities;
