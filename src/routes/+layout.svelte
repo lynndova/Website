@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<meta name="theme-color" content="#8400ff" />
+	<meta name="theme-color" content="#009e8e" />
 </svelte:head>
 
 <MetaTags {...metaTags} />
