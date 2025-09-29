@@ -41,3 +41,18 @@ export type AxolotlUserData = {
 		last_online: string;
 	};
 };
+
+export type Release = {
+	title: string;
+	slug: string;
+	icon: string;
+	date: string;
+	summary: string;
+	colour: string;
+	links: Link[];
+};
+
+export type Link = {
+	name: string;
+	to: string;
+};

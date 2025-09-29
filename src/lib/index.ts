@@ -9,7 +9,10 @@ export const formatDateTime = (time: Date) => {
 };
 
 export const formatDate = (time: Date) => {
-	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', { dateStyle: 'long' });
+	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', {
+		dateStyle: 'long',
+		timeZone: 'Europe/London'
+	});
 	return TIME_FORMAT.format(time);
 };
 

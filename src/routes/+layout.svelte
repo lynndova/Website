@@ -19,14 +19,17 @@
 <MetaTags {...metaTags} />
 
 <div class="flex h-dvh flex-col">
-	<nav class="flex w-full flex-row justify-center border-b">
+	<nav class="bg-dova-teal-4/10 flex w-full flex-row justify-center border-b">
 		<div
 			class="flex w-full max-w-[72rem] flex-row items-center justify-center gap-4 p-6 sm:justify-between"
 		>
-			<span class="flex flex-row items-center gap-4 text-xl font-bold tracking-tight">
+			<a
+				href="/"
+				class="flex flex-row items-center gap-4 text-xl font-bold tracking-tight no-underline"
+			>
 				<Logo />
 				lynndova
-			</span>
+			</a>
 		</div>
 	</nav>
 	<main class="flex w-full flex-auto flex-row items-center justify-center">
