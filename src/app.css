@@ -155,13 +155,13 @@
 	.md img {
 		@apply my-2 inline-block h-auto w-fit max-w-full rounded-3xl shadow-lg;
 	}
-	.md p {
+	p {
 		@apply my-4;
 	}
-	.md strong {
+	strong {
 		@apply font-bold;
 	}
-	.md li {
+	li {
 		@apply mb-2 ml-8 list-disc;
 	}
 
@@ -174,7 +174,7 @@
 	}
 
 	* {
-		@apply border-dova-border select-none;
+		@apply border-dova-border;
 		scrollbar-color: var(--color-dova-main-teal) var(--color-dova-background-secondary);
 	}
 
