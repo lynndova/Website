@@ -31,7 +31,10 @@ export async function fetchReleases() {
 			const { metadata } = (await resolver()) as any;
 			const releasePath = path.slice(22, -3);
 			if (metadata.slug === undefined) metadata.slug = releasePath;
-			return metadata;
+			return {
+				metadata,
+				path: releasePath
+			};
 		})
 	);
 
