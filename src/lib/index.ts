@@ -1,8 +1,3 @@
-export const spiritHeaders = {
-	'User-Agent': 'spiritgamestudios/snapperweb by Spirit Studios, hello@worldwidepixel.ca',
-	'Content-Type': 'application/json'
-};
-
 export const formatDateTime = (time: Date) => {
 	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 	return TIME_FORMAT.format(time);
@@ -26,4 +21,19 @@ export function getImageBlob(data: string) {
 	const imageBlob = new Blob([imageIntArray], { type: 'image/png' });
 
 	return imageBlob;
+}
+
+export async function fetchReleases() {
+	const allReleaseFiles = import.meta.glob('/src/content/releases/*.md');
+	const iterableFiles = Object.entries(allReleaseFiles);
+	const allReleases = await Promise.all(
+		iterableFiles.map(async ([path, resolver]) => {
+			const { metadata } = (await resolver()) as any;
+			const releasePath = path.slice(22, -3);
+			if (metadata.slug === undefined) metadata.slug = releasePath;
+			return metadata;
+		})
+	);
+
+	return allReleases;
 }
