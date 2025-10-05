@@ -179,11 +179,11 @@
 	}
 
 	h1:not(.md h1) {
-		@apply text-dova-text-strong text-4xl font-black tracking-tighter sm:text-6xl;
+		@apply text-dova-text-strong my-2 text-4xl font-black tracking-tighter sm:text-6xl;
 	}
 
 	h2:not(.md h2) {
-		@apply text-dova-text-strong text-4xl font-black tracking-tight;
+		@apply text-dova-text-strong my-1 text-4xl font-black tracking-tight;
 	}
 }
 

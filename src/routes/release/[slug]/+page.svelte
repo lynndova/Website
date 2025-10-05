@@ -30,11 +30,11 @@
 		>
 
 		<div class="flex flex-col gap-4">
-			<span class="text-6xl font-bold">{release.title}</span>
+			<h1 class="text-6xl font-bold">{release.title}</h1>
 			<span>
 				{release.summary}
 			</span>
-			<div class="flex flex-row flex-wrap items-center gap-2">
+			<div class="flex flex-row flex-wrap items-center gap-3">
 				{#each release.links as link}
 					<BigIconLink
 						text={link.name}

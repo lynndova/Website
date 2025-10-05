@@ -38,8 +38,9 @@
 		</div>
 	</main>
 	<footer class="bg-dova-background-secondary flex w-full flex-row justify-center border-t">
-		<div class="flex w-full max-w-[72rem] flex-col items-center p-6 text-sm">
+		<div class="flex w-full max-w-[72rem] flex-col items-center gap-4 p-6 text-sm">
 			<span>&copy; lynndova 2025 -</span>
+			<a class="text-dova-blue-1" href="https://worldwidepixel.ca">see me elsewhere</a>
 		</div>
 	</footer>
 </div>
