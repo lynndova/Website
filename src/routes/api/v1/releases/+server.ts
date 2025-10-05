@@ -3,5 +3,6 @@ import { json } from '@sveltejs/kit';
 
 export async function GET() {
 	const releases = await fetchReleases();
-	return json(releases);
+	const releasesMetadata = releases.map((e) => e.metadata);
+	return json(releasesMetadata);
 }

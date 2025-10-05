@@ -56,3 +56,9 @@ export type Link = {
 	name: string;
 	to: string;
 };
+
+export type Embed = {
+	type: 'youtube' | 'bandcamp';
+	id: string;
+	source: Link;
+};

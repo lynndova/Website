@@ -2,11 +2,14 @@
 	import { formatDate } from '$lib';
 	import type { Release } from '$lib/types.js';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
-	import type { RGBColor } from 'colorthief';
 
 	let { data } = $props();
 
 	const release: Release = data.metadata;
+
+	//console.log(data.embeds);
+	const hasBandcamp = data.embeds.find((embed) => embed.type === 'bandcamp');
+	const hasYoutube = data.embeds.find((embed) => embed.type === 'youtube');
 </script>
 
 <div class="flex flex-col gap-8 py-16 text-sm">
@@ -55,32 +58,32 @@
 		<div class="md">
 			{@render data.content()}
 		</div>
-		<!--
-			{
-				linksHaveBandcamp && bcData && (
-					<div class="flex w-fit flex-col gap-1">
-						<div class="w-fit rounded-3xl border bg-brand-background-secondary p-2">
-							<iframe
-								class="rounded-2xl"
-								style="border: 0; width: 350px; height: 654px;"
-								src={`https://bandcamp.com/EmbeddedPlayer/${bcData.url.includes("album") ? "album" : "track"}=${bcData.id}/size=large/bgcol=ffffff/linkcol=${bcData.colour.replace("#", "")}/transparent=true/`}
-								seamless
-							/>
-						</div>
-						<p class="p-2 text-center text-xs text-slate-500 transition-colors hover:text-slate-300 [&>a]:hover:text-blue-500">
-							Embedded Bandcamp content is subject to their
-							<a
-								class="text-center text-blue-700 transition-colors"
-								target="_blank"
-								href="https://bandcamp.com/privacy">
-								privacy policy
-							</a>
-							.
-						</p>
-					</div>
-				)
-			}
-				-->
+		{#if hasBandcamp}
+			<div class="flex w-fit flex-col gap-1">
+				<div class="bg-dova-background-secondary w-fit rounded-3xl border p-2">
+					<iframe
+						title="Bandcamp embed for {release.title}"
+						class="rounded-2xl"
+						style="border: 0; width: 350px; height: 654px;"
+						src={`https://bandcamp.com/EmbeddedPlayer/${hasBandcamp.source.to.includes('album') ? 'album' : 'track'}=${hasBandcamp.id}/size=large/bgcol=ffffff/linkcol=${release.colour.replace('#', '')}/transparent=true/`}
+						seamless
+					></iframe>
+				</div>
+				<p
+					class="hover:[&>a]:text-dova-blue-1 my-0 p-2 text-center text-xs text-slate-500 transition-colors hover:text-slate-300"
+				>
+					Embedded Bandcamp content is subject to their
+					<a
+						class="text-dova-blue-4 text-center transition-colors"
+						target="_blank"
+						href="https://bandcamp.com/privacy"
+					>
+						privacy policy
+					</a>
+					.
+				</p>
+			</div>
+		{/if}
 	</div>
 </div>
 <!--

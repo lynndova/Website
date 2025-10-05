@@ -18,6 +18,6 @@ The details are pretty simple:
 
 If it is not clear, I am not a lawyer. The terms outlined here are _usage guidelines_, not a license.
 
-If you are unsure if you may use my music or wish to license my music for your own use, do not hesitate to contact me via email (me at lynndova dot ca).
+If you are unsure if you may use my music or wish to license my music for your own use, do not hesitate to contact me via email (me at lynndova dot com).
 
 &lt;3 Lynn

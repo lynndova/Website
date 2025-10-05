@@ -11,5 +11,5 @@ export async function GET({ params }) {
 			message: 'Release not found'
 		});
 
-	return json(requestedRelease);
+	return json(requestedRelease.metadata);
 }
