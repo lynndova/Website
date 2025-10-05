@@ -1,9 +1,8 @@
 import { fetchReleases } from '$lib';
 import type { Embed, Link, Release } from '$lib/types';
 import { error } from '@sveltejs/kit';
-import bcfetch from 'bandcamp-fetch';
 
-export async function load({ params }) {
+export async function load({ params, fetch }) {
 	const requestedSlug = params.slug;
 	const releases = await fetchReleases();
 
@@ -20,15 +19,19 @@ export async function load({ params }) {
 	// Bandcamp Embeds
 	const bcUrl = metadata.links.find((link: Link) => link.name.toLowerCase() === 'bandcamp');
 	if (bcUrl !== undefined) {
-		const albumAPI = bcfetch.album;
-		const albumData = await albumAPI.getInfo({
-			albumUrl: bcUrl.to
+		const bcResponse = await fetch(bcUrl.to, {
+			headers: {
+				'Access-Control-Allow-Origin': 'lynndova.com'
+			}
 		});
+		const bcText = await bcResponse.text();
+		const albumIdRegex = /(?<=<!-- (album|track) id )(.*)(?= -->)/;
+		const albumId = albumIdRegex.exec(bcText)?.[0];
 
-		if (albumData.id) {
+		if (albumId) {
 			embeds.push({
 				type: 'bandcamp',
-				id: albumData.id.toString(),
+				id: albumId,
 				source: bcUrl
 			});
 		}
