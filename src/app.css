@@ -185,6 +185,10 @@
 	h2:not(.md h2) {
 		@apply text-dova-text-strong my-1 text-4xl font-black tracking-tight;
 	}
+
+	h3:not(.md h3) {
+		@apply text-dova-text-strong my-1 text-3xl font-extrabold tracking-tight;
+	}
 }
 
 html {

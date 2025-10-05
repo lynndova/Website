@@ -7,7 +7,6 @@
 
 	const release: Release = data.metadata;
 
-	console.log(data.embeds);
 	const hasBandcamp = data.embeds.find((embed) => embed.type === 'bandcamp');
 	const hasYoutube = data.embeds.find((embed) => embed.type === 'youtube');
 </script>
@@ -59,6 +58,9 @@
 			{@render data.content()}
 		</div>
 		<div class="flex flex-col gap-2">
+			{#if data.embeds.length > 0}
+				<h3 class="px-2">Listen</h3>
+			{/if}
 			{#if hasBandcamp}
 				<div class="flex w-fit flex-col gap-1">
 					<div class="bg-dova-background-secondary w-fit rounded-3xl border p-2">
