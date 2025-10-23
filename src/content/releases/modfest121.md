@@ -16,7 +16,7 @@ links:
 
 ## Enjoy the tunes that line the time walls of Stasis!
 
-By Nulb, lumiscosity and WorldWidePixel.
+By Nulb, lumiscosity and lynndova.
 
 ModFest is a recurring event that celebrates the minecraft modding community!
 For ModFest 1.21 a few talented artists in our community decided to band together to make a full length soundtrack.
