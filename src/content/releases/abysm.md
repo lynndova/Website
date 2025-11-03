@@ -5,6 +5,8 @@ date: '2025-08-27'
 summary: 'Something stirs in the depths. Its call demands an answer.'
 colour: '#bd68f4'
 links:
+  - name: 'Bandcamp'
+    to: 'https://lynndova.bandcamp.com/album/abysm'
   - name: 'YouTube'
     to: 'https://www.youtube.com/watch?v=L5bKHAQknAM'
   - name: 'SoundCloud'
