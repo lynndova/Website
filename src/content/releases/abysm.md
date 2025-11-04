@@ -11,6 +11,8 @@ links:
     to: 'https://www.youtube.com/watch?v=L5bKHAQknAM'
   - name: 'SoundCloud'
     to: 'https://soundcloud.com/lynndova/sets/abysm'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/29Mkr7HwR4KgnDx1HlyE1B'  
 ---
 
 ## Something stirs in the depths. Its call demands an answer.
