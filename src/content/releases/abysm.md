@@ -12,7 +12,9 @@ links:
   - name: 'SoundCloud'
     to: 'https://soundcloud.com/lynndova/sets/abysm'
   - name: 'Spotify'
-    to: 'https://open.spotify.com/album/29Mkr7HwR4KgnDx1HlyE1B'  
+    to: 'https://open.spotify.com/album/29Mkr7HwR4KgnDx1HlyE1B'
+  - name: 'Apple Music'
+    to: 'https://music.apple.com/album/abysm/1851252105'
 ---
 
 ## Something stirs in the depths. Its call demands an answer.
