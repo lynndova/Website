@@ -54,5 +54,5 @@ export function grabToHex(colour: GrabbedColour) {
 }
 
 export function getStaticRoot() {
-	return dev || building ? './static' : 'public';
+	return dev || building ? './static' : './public';
 }
