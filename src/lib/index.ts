@@ -59,7 +59,7 @@ export function grabToHex(colour: GrabbedColour) {
 
 export function getStaticRoot() {
 	// THIS IS SUCH CURSED
-	const fullPath = new URL(import.meta.url).pathname.substring(1);
+	const fullPath = new URL(import.meta.url).pathname;
 	const root = (dev ? fullPath.split('/src') : fullPath.split('/.svelte-kit/output'))[0];
 	console.log(root);
 	return dev || building ? './static' : root + '/.svelte-kit/output/client';
