@@ -22,4 +22,3 @@ export const init: ServerInit = async () => {
 		releaseColours[metadata.slug] = palette;
 	}
 };
-export { releaseColours };
