@@ -1,25 +1,28 @@
-import { building } from '$app/environment';
 import { fetchReleases, grabToHex } from '$lib';
-import type { Release, ReleasePalette } from '$lib/types';
+import type { ReleasePalette } from '$lib/types';
 import colour from 'colorthief';
 
-const releases = await fetchReleases();
+async function getReleaseColours() {
+	const colours: { [key: string]: ReleasePalette } = {};
+	for (const release of releases) {
+		const metadata = release.metadata;
 
-export const releaseColours: { [key: string]: ReleasePalette } = {};
+		const palette: ReleasePalette = {
+			slug: metadata.slug,
+			primary: metadata.colour,
+			secondary: grabToHex(await colour.getColor('./static' + metadata.icon)),
+			palette: (await colour.getPalette('./static' + metadata.icon)).map((colour) =>
+				grabToHex(colour)
+			)
+		};
 
-for (const release of releases) {
-	const metadata: Release = release.metadata;
+		console.log(release.metadata.slug);
 
-	const palette: ReleasePalette = {
-		slug: metadata.slug,
-		primary: metadata.colour,
-		secondary: grabToHex(await colour.getColor('./static' + metadata.icon)),
-		palette: (await colour.getPalette('./static' + metadata.icon)).map((colour) =>
-			grabToHex(colour)
-		)
-	};
+		colours[metadata.slug] = palette;
+	}
 
-	console.log(release.metadata.slug);
-
-	releaseColours[metadata.slug] = palette;
+	return colours;
 }
+
+const releases = await fetchReleases();
+export const releaseColours = await getReleaseColours();
