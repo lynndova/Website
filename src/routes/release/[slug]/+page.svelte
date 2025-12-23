@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { formatDate } from '$lib';
-	import type { Release } from '$lib/types.js';
+	import type { HexColour, Release } from '$lib/types.js';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
 
 	let { data } = $props();
@@ -9,6 +10,12 @@
 
 	const hasBandcamp = data.embeds.find((embed) => embed.type === 'bandcamp');
 	const hasYoutube = data.embeds.find((embed) => embed.type === 'youtube');
+
+	function getGradient(palette: HexColour[], main: HexColour) {
+		return `linear-gradient(90deg,${palette[1]} 0%, ${main} 50%, ${palette[2]} 100%)`;
+	}
+
+	const colour = data.colours[release.slug];
 </script>
 
 <div class="flex flex-col gap-8 py-16 text-sm">
@@ -57,9 +64,9 @@
 		<div class="md">
 			{@render data.content()}
 		</div>
-		<div class="flex flex-col gap-2">
+		<div class="flex flex-col items-center gap-2 lg:items-start">
 			{#if data.embeds.length > 0}
-				<h3 class="px-2">Listen</h3>
+				<h3 class="w-fit px-2">Listen</h3>
 			{/if}
 			{#if hasBandcamp}
 				<div class="flex w-fit flex-col gap-1">
@@ -120,10 +127,9 @@
 		</div>
 	</div>
 </div>
-<!--
-<div
-	style={`background: ${data.colours.gradientCSS};
-`}
-	class="bgimg pointer-events-none absolute top-0 left-0 z-[-2] h-[75%] w-full overflow-hidden object-cover opacity-35 blur-2xl saturate-200"
-></div>
-	-->
+{#if colour}
+	<div
+		style="background: {getGradient(colour.palette, colour.secondary)};"
+		class="bgimg pointer-events-none absolute top-0 left-0 z-[-2] h-[80%] w-full overflow-hidden object-cover opacity-35 blur-2xl saturate-200"
+	></div>
+{/if}

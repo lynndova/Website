@@ -1,6 +1,7 @@
 import { fetchReleases } from '$lib';
 import type { Embed, Link, Release } from '$lib/types';
 import { error } from '@sveltejs/kit';
+import { releaseColours } from '../../../hooks.server.js';
 
 export async function load({ params, fetch }) {
 	const requestedSlug = params.slug;
@@ -54,5 +55,5 @@ export async function load({ params, fetch }) {
 		}
 	}
 
-	return { embeds, requestedRelease, metadata };
+	return { embeds, requestedRelease, metadata, colours: releaseColours };
 }

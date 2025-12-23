@@ -1,3 +1,6 @@
+import type { GrabbedColour } from 'colorthief';
+import type { HexColour, ReleasePalette } from './types';
+
 export const formatDateTime = (time: Date) => {
 	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 	return TIME_FORMAT.format(time);
@@ -39,4 +42,12 @@ export async function fetchReleases() {
 	);
 
 	return allReleases;
+}
+
+// https://stackoverflow.com/a/5624139
+export function grabToHex(colour: GrabbedColour) {
+	return ('#' +
+		((1 << 24) | (colour[0] << 16) | (colour[1] << 8) | colour[2])
+			.toString(16)
+			.slice(1)) as HexColour;
 }

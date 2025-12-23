@@ -1,46 +1,4 @@
-export type PictureData = {
-	uploader: string;
-	filename: string;
-	file: string;
-	shared_at: string;
-};
-
-export type UserData = {
-	uuid: string;
-	username: string;
-	username_history: UsernameHistoryEntry[];
-	textures: {
-		custom: boolean;
-		slim: boolean;
-		skin?: {
-			url: string;
-			data: string;
-		};
-		cape?: {
-			url: string;
-			data: string;
-		};
-		raw: {
-			value: string;
-			signature: string;
-		};
-	};
-	created_at: string;
-};
-
-export type UsernameHistoryEntry = {
-	username: string;
-};
-
-export type AxolotlUserData = {
-	uuid: string;
-	username: string;
-	registered: string;
-	status: {
-		type: 'online' | 'offline';
-		last_online: string;
-	};
-};
+import type { GrabbedColour } from 'colorthief';
 
 export type Release = {
 	title: string;
@@ -48,7 +6,7 @@ export type Release = {
 	icon: string;
 	date: string;
 	summary: string;
-	colour: string;
+	colour: HexColour;
 	links: Link[];
 };
 
@@ -61,4 +19,13 @@ export type Embed = {
 	type: 'youtube' | 'bandcamp';
 	id: string;
 	source: Link;
+};
+
+export type HexColour = `#${string}`;
+
+export type ReleasePalette = {
+	slug: string;
+	primary: HexColour;
+	secondary: HexColour;
+	palette: HexColour[];
 };

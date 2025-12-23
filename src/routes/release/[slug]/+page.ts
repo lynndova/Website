@@ -1,5 +1,4 @@
 import type { MetaTagsProps } from 'svelte-meta-tags';
-import ColorThief, { type RGBColor } from 'colorthief';
 
 export async function load({ url, data }) {
 	const postFile = await import(`../../../content/releases/${data.requestedRelease.path}.md`);
@@ -20,6 +19,7 @@ export async function load({ url, data }) {
 		pageMetaTags,
 		metadata: data.metadata,
 		content,
-		embeds: data.embeds
+		embeds: data.embeds,
+		colours: data.colours
 	};
 }
