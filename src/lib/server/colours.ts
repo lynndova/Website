@@ -19,5 +19,7 @@ for (const release of releases) {
 		)
 	};
 
+	console.log(release.metadata.slug);
+
 	releaseColours[metadata.slug] = palette;
 }
