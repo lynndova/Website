@@ -62,5 +62,5 @@ export function getStaticRoot() {
 	const fullPath = new URL(import.meta.url).pathname.substring(1);
 	const root = (dev ? fullPath.split('/src') : fullPath.split('/.svelte-kit/output'))[0];
 	console.log(root);
-	return dev || building ? root + '/static' : root + '/.svelte-kit/output/client';
+	return dev ? root + '/static' : root + '/.svelte-kit/output/client';
 }
