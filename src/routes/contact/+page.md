@@ -5,6 +5,7 @@
 Hi! I'm Lynn! If you wish to contact me, please do so via the following channels:
 
 - contact@worldwidepixel.ca
+- me@worldwidepixel.ca
 - me@lynndova.com
 - lynndova@gmail.com
 

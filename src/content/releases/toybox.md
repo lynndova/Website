@@ -25,18 +25,18 @@ come play toys with me
 Composition:
 
 - Aethyus
-- cordova
+- lynndova
 - Nulb
 - soileH
 - Superkat32
 
 Mastering
 
-- cordova
+- lynndova
 - Nulb
 
 Album Art
 
-- cordova
+- lynndova
 
 Some rights reserved. Please refer to individual track pages for license info.
