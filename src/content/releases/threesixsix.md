@@ -1,5 +1,6 @@
 ---
 title: '366'
+slug: '366'
 icon: '/img/music/366.png'
 date: '2024-12-31'
 summary: 'From respectably ridiculous to properly pretty, this is 366.'

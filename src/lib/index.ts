@@ -28,16 +28,20 @@ export function getImageBlob(data: string) {
 }
 
 export async function fetchReleases() {
-	const allReleaseFiles = import.meta.glob('/src/content/releases/*.md');
+	const allReleaseFiles = import.meta.glob('/src/content/releases/*.{md,mdx}');
 	const iterableFiles = Object.entries(allReleaseFiles);
 	const allReleases = await Promise.all(
 		iterableFiles.map(async ([path, resolver]) => {
 			const { metadata } = (await resolver()) as any;
-			const releasePath = path.slice(22, -3);
-			if (metadata.slug === undefined) metadata.slug = releasePath;
+			const pathRegex = /^(.+)\/([^\/]+)$/;
+			const releasePathTest = pathRegex.exec(path);
+			const fileName = releasePathTest && releasePathTest[2] ? releasePathTest[2] : path;
+			const isProvidedSlugPath = (pathRegex.exec(metadata.slug)?.length ?? 0) > 0;
+			if (metadata.slug === undefined || isProvidedSlugPath)
+				metadata.slug = fileName.split('.').slice(0, -1).join('.');
 			return {
 				metadata,
-				path: releasePath
+				path: fileName
 			};
 		})
 	);
@@ -54,5 +58,6 @@ export function grabToHex(colour: GrabbedColour) {
 }
 
 export function getStaticRoot() {
-	return dev || building ? './static' : '.';
+	console.log(new URL(import.meta.url).pathname + ' meow');
+	return dev || building ? './static' : new URL(import.meta.url).pathname.substring(1);
 }
