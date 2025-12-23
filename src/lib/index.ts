@@ -1,5 +1,5 @@
 import type { GrabbedColour } from 'colorthief';
-import type { HexColour, ReleasePalette } from './types';
+import type { HexColour } from './types';
 import { building, dev } from '$app/environment';
 
 export const formatDateTime = (time: Date) => {
@@ -58,6 +58,9 @@ export function grabToHex(colour: GrabbedColour) {
 }
 
 export function getStaticRoot() {
-	console.log(new URL(import.meta.url).pathname + ' meow');
-	return dev || building ? './static' : new URL(import.meta.url).pathname.substring(1);
+	// THIS IS SUCH CURSED
+	const fullPath = new URL(import.meta.url).pathname.substring(1);
+	const root = (dev ? fullPath.split('/src') : fullPath.split('/.svelte-kit/output'))[0];
+	console.log(root);
+	return dev || building ? root + '/static' : root + '/.svelte-kit/output/client';
 }
