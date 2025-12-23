@@ -1,4 +1,5 @@
 import { fetchReleases, grabToHex } from '$lib';
+import { releaseColours } from '$lib/server/colours';
 import type { Release, ReleasePalette } from '$lib/types';
 import type { ServerInit } from '@sveltejs/kit';
 import colour from 'colorthief';
@@ -21,5 +22,4 @@ export const init: ServerInit = async () => {
 		releaseColours[metadata.slug] = palette;
 	}
 };
-
-export const releaseColours: { [key: string]: ReleasePalette } = {};
+export { releaseColours };
