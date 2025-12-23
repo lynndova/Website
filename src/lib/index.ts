@@ -1,5 +1,6 @@
 import type { GrabbedColour } from 'colorthief';
 import type { HexColour, ReleasePalette } from './types';
+import { dev } from '$app/environment';
 
 export const formatDateTime = (time: Date) => {
 	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
@@ -50,4 +51,8 @@ export function grabToHex(colour: GrabbedColour) {
 		((1 << 24) | (colour[0] << 16) | (colour[1] << 8) | colour[2])
 			.toString(16)
 			.slice(1)) as HexColour;
+}
+
+export function getStaticRoot() {
+	return dev ? './static' : '/';
 }

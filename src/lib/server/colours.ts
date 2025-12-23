@@ -1,4 +1,4 @@
-import { fetchReleases, grabToHex } from '$lib';
+import { fetchReleases, getStaticRoot, grabToHex } from '$lib';
 import type { ReleasePalette } from '$lib/types';
 import colour from 'colorthief';
 
@@ -10,8 +10,8 @@ async function getReleaseColours() {
 		const palette: ReleasePalette = {
 			slug: metadata.slug,
 			primary: metadata.colour,
-			secondary: grabToHex(await colour.getColor('./static' + metadata.icon)),
-			palette: (await colour.getPalette('./static' + metadata.icon)).map((colour) =>
+			secondary: grabToHex(await colour.getColor(getStaticRoot() + metadata.icon)),
+			palette: (await colour.getPalette(getStaticRoot() + metadata.icon)).map((colour) =>
 				grabToHex(colour)
 			)
 		};
