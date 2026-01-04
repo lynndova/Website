@@ -4,7 +4,7 @@ import { cloudflare } from '@cloudflare/vite-plugin';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), cloudflare()],
+	plugins: [tailwindcss(), sveltekit()],
 	ssr: {
 		external: ['node:fs', 'node:path', 'node:util', 'node:stream', 'node:zlib', 'node:assert']
 	}
