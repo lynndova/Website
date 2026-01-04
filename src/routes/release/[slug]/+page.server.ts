@@ -3,8 +3,6 @@ import type { Embed, Link, Release } from '$lib/types';
 import { error } from '@sveltejs/kit';
 import { getColours } from '$lib/server/colours';
 
-export const prerender = true;
-
 export async function load({ params, fetch }) {
 	const requestedSlug = params.slug;
 	const releases = await fetchReleases();
