@@ -22,6 +22,6 @@ export async function load({ url, data }) {
 		metadata: data.metadata,
 		content,
 		embeds: data.embeds,
-		colours: data.colours
+		colours: JSON.parse(data.colours)
 	};
 }

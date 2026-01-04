@@ -1,8 +1,10 @@
+<!-- svelte-ignore state_referenced_locally -->
+
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { formatDate } from '$lib';
-	import type { HexColour, Release } from '$lib/types.js';
+	import type { IncompleteNodeVibrantPalette, Release } from '$lib/types.js';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
+	import { rgbToHex, type Palette } from '@vibrant/color';
 
 	let { data } = $props();
 
@@ -11,8 +13,9 @@
 	const hasBandcamp = data.embeds.find((embed) => embed.type === 'bandcamp');
 	const hasYoutube = data.embeds.find((embed) => embed.type === 'youtube');
 
-	function getGradient(palette: HexColour[], main: HexColour) {
-		return `linear-gradient(90deg,${palette[1]} 0%, ${main} 50%, ${palette[2]} 100%)`;
+	// WHAT THE JANK
+	function getGradient(palette: IncompleteNodeVibrantPalette) {
+		return `linear-gradient(90deg,${rgbToHex(...palette.LightVibrant.rgb)} 0%, ${rgbToHex(...palette.Vibrant.rgb)} 50%, ${rgbToHex(...palette.DarkVibrant.rgb)} 100%)`;
 	}
 
 	const colour = data.colours[release.slug];
@@ -22,7 +25,7 @@
 	<img
 		draggable="false"
 		style="borderColor: color-mix(in oklab, {release.colour}, transparent 80%"
-		class="mx-auto block size-56 rounded-md border-[1px] shadow-2xl md:hidden"
+		class="mx-auto block size-56 rounded-md border shadow-2xl md:hidden"
 		src={release.icon}
 		alt="{release.title} album cover"
 	/>
@@ -30,7 +33,7 @@
 		<img
 			draggable="false"
 			style="borderColor: color-mix(in oklab, {release.colour}, transparent 80%"
-			class="row-start-2 hidden size-48 rounded-md border-[1px] shadow-2xl md:block"
+			class="row-start-2 hidden size-48 rounded-md border shadow-2xl md:block"
 			src={release.icon}
 			alt="{release.title} album cover"
 		/>
@@ -129,7 +132,7 @@
 </div>
 {#if colour}
 	<div
-		style="background: {getGradient(colour.palette, colour.secondary)};"
+		style="background: {getGradient(colour.palette)};"
 		class="bgimg pointer-events-none absolute top-0 left-0 z-[-2] h-[80%] w-full overflow-hidden object-cover opacity-35 blur-2xl saturate-200"
 	></div>
 {/if}

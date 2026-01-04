@@ -3,8 +3,9 @@
 	import type { Release } from '$lib/types';
 	import { formatDate } from '$lib';
 	let { data }: { data: Release } = $props();
+	const illGottenData = () => data;
 
-	const keyColour = chroma(data.colour);
+	const keyColour = chroma(illGottenData().colour);
 
 	const colours = {
 		key: keyColour.hex(),

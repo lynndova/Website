@@ -1,8 +1,8 @@
 import { fetchReleases } from '$lib';
-import { releaseColours } from '$lib/server/colours';
+import { getColours } from '$lib/server/colours';
 import { json, error } from '@sveltejs/kit';
 
-export async function GET({ params }) {
+export async function GET({ params, fetch }) {
 	const requestedSlug = params.slug;
 	const releases = await fetchReleases();
 
@@ -12,6 +12,6 @@ export async function GET({ params }) {
 			message: 'Release not found'
 		});
 
-	const colours = releaseColours[requestedRelease.metadata.slug];
-	return json(colours);
+	const colours = await getColours();
+	return json(colours[requestedRelease.metadata.slug]);
 }

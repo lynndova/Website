@@ -1,3 +1,5 @@
+<!-- svelte-ignore state_referenced_locally -->
+
 <script lang="ts">
 	import Logo from '$lib/brand/Logo.svelte';
 	import AlbumCard from '$lib/ui/AlbumCard.svelte';

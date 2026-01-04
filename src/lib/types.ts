@@ -1,4 +1,4 @@
-import type { GrabbedColour } from 'colorthief';
+import type { Palette } from '@vibrant/color';
 
 export type Release = {
 	title: string;
@@ -22,10 +22,36 @@ export type Embed = {
 };
 
 export type HexColour = `#${string}`;
+export type RGBColour = [number, number, number];
 
 export type ReleasePalette = {
 	slug: string;
-	primary: HexColour;
-	secondary: HexColour;
-	palette: HexColour[];
+	palette: Palette;
+};
+
+export type IncompleteNodeVibrantPalette = {
+	Vibrant: {
+		rgb: RGBColour;
+		population: number;
+	};
+	DarkVibrant: {
+		rgb: RGBColour;
+		population: number;
+	};
+	LightVibrant: {
+		rgb: RGBColour;
+		population: number;
+	};
+	Muted: {
+		rgb: RGBColour;
+		population: number;
+	};
+	DarkMuted: {
+		rgb: RGBColour;
+		population: number;
+	};
+	LightMuted: {
+		rgb: RGBColour;
+		population: number;
+	};
 };
