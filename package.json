@@ -14,7 +14,6 @@
 		"lint": "prettier --check ."
 	},
 	"devDependencies": {
-		"@cloudflare/vite-plugin": "^1.17.1",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/adapter-cloudflare": "^7.2.4",
 		"@sveltejs/kit": "^2.49.2",

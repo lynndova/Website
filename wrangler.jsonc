@@ -16,5 +16,6 @@
 		"stream": "node:stream",
 		"zlib": "node:zlib",
 		"assert": "node:assert"
-	}
+	},
+	"external": ["node:*"]
 }
