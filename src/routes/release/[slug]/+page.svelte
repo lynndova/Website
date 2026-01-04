@@ -1,6 +1,7 @@
 <!-- svelte-ignore state_referenced_locally -->
 
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { formatDate } from '$lib';
 	import type { IncompleteNodeVibrantPalette, Release } from '$lib/types.js';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
@@ -135,16 +136,29 @@
 		style="background: {getGradient(colour.palette)};"
 		class="bgimg pointer-events-none absolute top-0 left-0 z-[-2] h-[80%] w-full overflow-hidden object-cover opacity-35 blur-2xl saturate-200"
 	></div>
-	<div class="size-20" style="background-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}"></div>
-	<div
-		class="size-20"
-		style="background-color: {rgbToHex(...colour.palette.DarkVibrant.rgb)}"
-	></div>
-	<div class="size-20" style="background-color: {rgbToHex(...colour.palette.LightMuted.rgb)}"></div>
-	<div
-		class="size-20"
-		style="background-color: {rgbToHex(...colour.palette.LightVibrant.rgb)}"
-	></div>
-	<div class="size-20" style="background-color: {rgbToHex(...colour.palette.Muted.rgb)}"></div>
-	<div class="size-20" style="background-color: {rgbToHex(...colour.palette.Vibrant.rgb)}"></div>
+	{#if dev}
+		<div class="flex flex-row flex-wrap">
+			<div
+				class="size-20"
+				style="background-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}"
+			></div>
+			<div
+				class="size-20"
+				style="background-color: {rgbToHex(...colour.palette.DarkVibrant.rgb)}"
+			></div>
+			<div
+				class="size-20"
+				style="background-color: {rgbToHex(...colour.palette.LightMuted.rgb)}"
+			></div>
+			<div
+				class="size-20"
+				style="background-color: {rgbToHex(...colour.palette.LightVibrant.rgb)}"
+			></div>
+			<div class="size-20" style="background-color: {rgbToHex(...colour.palette.Muted.rgb)}"></div>
+			<div
+				class="size-20"
+				style="background-color: {rgbToHex(...colour.palette.Vibrant.rgb)}"
+			></div>
+		</div>
+	{/if}
 {/if}
