@@ -1,6 +1,6 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
-	"name": "lynndova-website",
+	"name": "lynndova-website-worker",
 	"assets": {
 		"directory": ".svelte-kit/cloudflare",
 		"not_found_handling": "404-page"
