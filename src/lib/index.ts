@@ -1,4 +1,3 @@
-import type { GrabbedColour } from 'colorthief';
 import type { HexColour } from './types';
 import { building, dev } from '$app/environment';
 
@@ -47,14 +46,6 @@ export async function fetchReleases() {
 	);
 
 	return allReleases;
-}
-
-// https://stackoverflow.com/a/5624139
-export function grabToHex(colour: GrabbedColour) {
-	return ('#' +
-		((1 << 24) | (colour[0] << 16) | (colour[1] << 8) | colour[2])
-			.toString(16)
-			.slice(1)) as HexColour;
 }
 
 export function getStaticRoot() {

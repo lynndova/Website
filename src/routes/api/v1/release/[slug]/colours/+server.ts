@@ -2,7 +2,7 @@ import { fetchReleases } from '$lib';
 import { getColours } from '$lib/server/colours';
 import { json, error } from '@sveltejs/kit';
 
-export async function GET({ params, fetch }) {
+export async function GET({ params }) {
 	const requestedSlug = params.slug;
 	const releases = await fetchReleases();
 

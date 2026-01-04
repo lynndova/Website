@@ -1,12 +1,13 @@
-<!-- svelte-ignore state_referenced_locally -->
-
 <script lang="ts">
 	import Logo from '$lib/brand/Logo.svelte';
 	import AlbumCard from '$lib/ui/AlbumCard.svelte';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
 	import { SiBandcamp, SiBluesky, SiSoundcloud, SiSpotify } from '@icons-pack/svelte-simple-icons';
 
-	const { data } = $props();
+	const { data: dataGet } = $props();
+
+	const illGottenData = () => dataGet;
+	const data = illGottenData();
 
 	const releases = data.releases
 		.sort((a, b) => new Date(a.metadata.date).getTime() - new Date(b.metadata.date).getTime())
