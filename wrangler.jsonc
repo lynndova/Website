@@ -1,7 +1,10 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "lynndova-website",
-	"pages_build_output_dir": ".svelte-kit/cloudflare",
+	"assets": {
+		"directory": ".svelte-kit/cloudflare",
+		"not_found_handling": "404-page"
+	},
 	"compatibility_date": "2025-11-17",
 	"compatibility_flags": ["nodejs_compat"],
 	"alias": {
