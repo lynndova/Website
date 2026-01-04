@@ -1,0 +1,15 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "lynndova-website",
+	"pages_build_output_dir": ".svelte-kit/cloudflare",
+	"compatibility_date": "2025-11-17",
+	"compatibility_flags": ["nodejs_compat"],
+	"alias": {
+		"fs": "node:fs",
+		"path": "node:path",
+		"util": "node:util",
+		"stream": "node:stream",
+		"zlib": "node:zlib",
+		"assert": "node:assert"
+	}
+}
