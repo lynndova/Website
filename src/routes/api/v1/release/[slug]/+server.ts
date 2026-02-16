@@ -1,5 +1,6 @@
 import { fetchReleases } from '$lib';
 import { json, error } from '@sveltejs/kit';
+import colours from '$lib/colours.json';
 
 export async function GET({ params }) {
 	const requestedSlug = params.slug;
@@ -12,6 +13,8 @@ export async function GET({ params }) {
 		});
 
 	return json({
-		metadata: requestedRelease.metadata
+		metadata: requestedRelease.metadata,
+		// @ts-ignore
+		colours: colours[requestedRelease.metadata.slug]
 	});
 }

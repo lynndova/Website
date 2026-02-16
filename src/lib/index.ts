@@ -1,6 +1,3 @@
-import type { HexColour } from './types';
-import { building, dev } from '$app/environment';
-
 export const formatDateTime = (time: Date) => {
 	const TIME_FORMAT = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 	return TIME_FORMAT.format(time);
@@ -46,12 +43,4 @@ export async function fetchReleases() {
 	);
 
 	return allReleases;
-}
-
-export function getStaticRoot() {
-	// THIS IS SUCH CURSED
-	const fullPath = new URL(import.meta.url).pathname;
-	const root = (dev ? fullPath.split('/src') : fullPath.split('/.svelte-kit/output'))[0];
-	console.log(root);
-	return dev || building ? './static' : root + '/.svelte-kit/output/client';
 }

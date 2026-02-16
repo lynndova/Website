@@ -1,12 +1,11 @@
 import { fetchReleases } from '$lib';
 import type { Embed, Link, Release } from '$lib/types';
 import { error } from '@sveltejs/kit';
-import { getColours } from '$lib/server/colours';
+import colours from '$lib/colours.json';
 
 export async function load({ params, fetch }) {
 	const requestedSlug = params.slug;
 	const releases = await fetchReleases();
-	const colours = await getColours();
 
 	const requestedRelease = releases.find((release) => release.metadata.slug === requestedSlug);
 	if (requestedRelease === undefined)
