@@ -8,14 +8,5 @@
 		"not_found_handling": "404-page"
 	},
 	"compatibility_date": "2025-11-17",
-	"compatibility_flags": ["nodejs_compat"],
-	"alias": {
-		"fs": "node:fs",
-		"path": "node:path",
-		"util": "node:util",
-		"stream": "node:stream",
-		"zlib": "node:zlib",
-		"assert": "node:assert"
-	},
-	"external": ["node:*"]
+	"compatibility_flags": ["nodejs_compat"]
 }
