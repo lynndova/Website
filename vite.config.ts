@@ -30,17 +30,29 @@ export async function getReleases() {
 export const genDataPlugin: Plugin = {
 	name: 'lynndova-gendata',
 	async generateBundle() {
+		const testContent = 'lynn says hi';
+		const releases = await getReleases();
 		const colours = {
 			test: 'hi',
 			test2: 'hi2'
 		};
-		const colourContent = 'hello';
-		console.log(colourContent);
 
-		const location = path.resolve('./static/test.txt');
+		const testLocation = path.resolve('./static/test.txt');
 
-		fs.writeFile(location, JSON.stringify(colours), {}, () => {
-			console.log(`Generated ${Object.keys(colours).length} release colours to ${location}`);
+		fs.writeFile(testLocation, testContent, {}, () => {
+			console.log(`Generated test file in ${testLocation}`);
+		});
+
+		const releasesLocation = path.resolve('./src/lib/releases.json');
+
+		fs.writeFile(releasesLocation, JSON.stringify(releases), {}, () => {
+			console.log(`Generated ${Object.keys(colours).length} releases to ${location}`);
+		});
+
+		const coloursLocation = path.resolve('./src/lib/colours.json');
+
+		fs.writeFile(coloursLocation, JSON.stringify(colours), {}, () => {
+			console.log(`Generated ${Object.keys(colours).length} colours to ${location}`);
 		});
 	}
 };

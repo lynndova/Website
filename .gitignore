@@ -21,3 +21,8 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# lynndova datagen
+/src/lib/colours.json
+/src/lib/releases.json
+/static/test.txt
