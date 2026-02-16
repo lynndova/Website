@@ -29,7 +29,7 @@ export async function getReleases() {
 
 export const genDataPlugin: Plugin = {
 	name: 'lynndova-gendata',
-	async buildEnd() {
+	async generateBundle() {
 		const colours = {
 			test: 'hi',
 			test2: 'hi2'
