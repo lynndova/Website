@@ -37,7 +37,7 @@ export const genDataPlugin: Plugin = {
 		const colourContent = 'hello';
 		console.log(colourContent);
 
-		const location = path.resolve('./static/test.json');
+		const location = path.resolve('./static/test.txt');
 
 		fs.writeFile(location, JSON.stringify(colours), {}, () => {
 			console.log(`Generated ${Object.keys(colours).length} release colours to ${location}`);
