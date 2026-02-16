@@ -1,5 +1,3 @@
-<!-- svelte-ignore state_referenced_locally -->
-
 <script lang="ts">
 	import { dev } from '$app/environment';
 	import { formatDate } from '$lib';
@@ -8,18 +6,19 @@
 	import { rgbToHex, type Palette } from '@vibrant/color';
 
 	let { data } = $props();
+		const illGottenData = () => data;
 
-	const release: Release = data.metadata;
+	const release: Release = illGottenData().metadata;
 
-	const hasBandcamp = data.embeds.find((embed) => embed.type === 'bandcamp');
-	const hasYoutube = data.embeds.find((embed) => embed.type === 'youtube');
+	const hasBandcamp = illGottenData().embeds.find((embed) => embed.type === 'bandcamp');
+	const hasYoutube = illGottenData().embeds.find((embed) => embed.type === 'youtube');
 
 	// WHAT THE JANK
 	function getGradient(palette: IncompleteNodeVibrantPalette) {
 		return `linear-gradient(90deg,${rgbToHex(...palette.LightVibrant.rgb)} 0%, ${rgbToHex(...palette.Vibrant.rgb)} 50%, ${rgbToHex(...palette.DarkVibrant.rgb)} 100%)`;
 	}
 
-	const colour: { palette: IncompleteNodeVibrantPalette } = data.colours[release.slug];
+	const colour: { palette: IncompleteNodeVibrantPalette } = illGottenData().colours[release.slug];
 </script>
 
 <div class="flex flex-col gap-8 py-16 text-sm">
