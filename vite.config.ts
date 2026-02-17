@@ -56,7 +56,7 @@ async function generateColours(releases: ReleaseContainer[]) {
 
 export const lynndovaDatagenPlugin: Plugin = {
 	name: 'lynndova-datagen',
-	async buildEnd() {
+	async buildStart() {
 		const testContent = 'lynn says hi';
 		const releases = await generateReleases();
 		const colours = await generateColours(releases as ReleaseContainer[]);
