@@ -21,7 +21,7 @@
 <a
 	href="/release/{data.slug}"
 	style={getBackgroundGradient()}
-	class="flex cursor-pointer flex-col items-center justify-between gap-4 rounded-2xl border no-underline shadow-2xl transition hover:brightness-90 active:scale-95"
+	class="flex cursor-pointer flex-col items-center justify-between focus:scale-99 hover:scale-99 hover:border-dova-white-4 gap-4 rounded-2xl border no-underline shadow-2xl transition hover:brightness-90 active:scale-95"
 >
 	<img
 		class="size-64 rounded-2xl"

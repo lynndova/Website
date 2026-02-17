@@ -4,11 +4,8 @@
 
 Hi! I'm Lynn! If you wish to contact me, please do so via the following channels:
 
-- contact@worldwidepixel.ca
-- me@worldwidepixel.ca
 - me@lynndova.com
-- lynndova@gmail.com
 
-Let's hope Cloudflare keeps bots from scraping these!
+_I really hope Cloudflare keeps bots from scraping these!_
 
-I get a lot of emails! (no, I do not.) Thus, it might be difficult to immediately get back to you. I'll definitely try to read your email, though!
+I'm a very busy person, so it may be difficult to get back to you. I'll try my best to read all emails I recieve.
