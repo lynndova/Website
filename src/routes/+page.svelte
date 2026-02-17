@@ -1,15 +1,17 @@
 <script lang="ts">
+	import releases from '$lib/releases.json';
 	import Logo from '$lib/brand/Logo.svelte';
 	import AlbumCard from '$lib/ui/AlbumCard.svelte';
 	import BigIconLink from '$lib/ui/BigIconLink.svelte';
 	import { SiBandcamp, SiBluesky, SiSoundcloud, SiSpotify } from '@icons-pack/svelte-simple-icons';
+	import type { ReleaseContainer } from '$lib/types.js';
 
 	const { data: dataGet } = $props();
 
 	const illGottenData = () => dataGet;
 	const data = illGottenData();
 
-	const releases = data.releases
+	const sortedReleases = (releases as ReleaseContainer[])
 		.sort((a, b) => new Date(a.metadata.date).getTime() - new Date(b.metadata.date).getTime())
 		.reverse();
 </script>
@@ -41,7 +43,7 @@
 	<div
 		class="grid w-fit auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 	>
-		{#each releases as release}
+		{#each sortedReleases as release}
 			<AlbumCard data={release.metadata} />
 		{/each}
 	</div>
