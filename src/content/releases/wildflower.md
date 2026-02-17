@@ -1,16 +1,16 @@
 ---
-title: "Wildflower"
-icon: "/img/music/wildflower.png"
-date: "2024-03-26"
+title: 'Wildflower'
+icon: '/img/music/wildflower.png'
+date: '2024-03-26'
 summary: "You've got to start somewhere."
-colour: "#a100ff"
+colour: '#a100ff'
 links:
-    - name: "Bandcamp"
-      to: "https://lynndova.bandcamp.com/album/wildflower"
-    - name: "Spotify"
-      to: "https://open.spotify.com/album/4M4e76UmfVYmu502ETYlri"
-    - name: "Apple Music"
-      to: "https://music.apple.com/album/wildflower-ep/1780496177"
+  - name: 'Bandcamp'
+    to: 'https://lynndova.bandcamp.com/album/wildflower'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/4M4e76UmfVYmu502ETYlri'
+  - name: 'Apple Music'
+    to: 'https://music.apple.com/album/wildflower-ep/1780496177'
 ---
 
 ## You've got to start somewhere.
@@ -21,7 +21,7 @@ Will always hold a special place in my heart.
 
 ### Song notes
 
-**Wildflower** is the first track made for Hollow. Even though the project file has been lost (or more accurately, ruined), I am lucky to have relatively high quality versions of the song that were able to be used. Out of sheer luck, I think it projects the vibe of "hollowness" perfectly. Here's [and old work-in-progress mix](/misc/oldflower.mp3) of it.
+**Wildflower** is the first track made for Hollow. Even though the project file has been lost (or more accurately, ruined), I am lucky to have relatively high quality versions of the song that were able to be used. Out of sheer luck, I think it projects the vibe of "hollowness" perfectly. Here's [and old work-in-progress mix](https://worldwidepixel.ca/misc/oldflower.mp3) of it.
 
 **Waterlily** (this W trend is odd, isn't it?) was made soon after. The song plays in the Swamp, and is meant to bring yet again a sense of calm. In hindsight, it should have been longer.
 
