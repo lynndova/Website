@@ -1,8 +1,7 @@
-import { fetchReleases } from '$lib';
 import { json } from '@sveltejs/kit';
+import releases from '$lib/releases.json';
 
 export async function GET() {
-	const releases = await fetchReleases();
 	const releasesMetadata = releases.map((e) => e.metadata);
 	return json(releasesMetadata);
 }
