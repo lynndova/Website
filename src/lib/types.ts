@@ -1,5 +1,11 @@
 import type { Palette } from '@vibrant/color';
 
+export type ReleaseContainer = {
+	metadata: Release;
+	path: string;
+	body: string;
+};
+
 export type Release = {
 	title: string;
 	slug: string;

@@ -1,4 +1,5 @@
-import { fetchReleases } from '$lib';
+import releases from '$lib/releases.json';
+import type { ReleaseContainer } from '$lib/types';
 import type { MetaTagsProps } from 'svelte-meta-tags';
 
 export const load = async () => {
@@ -6,10 +7,8 @@ export const load = async () => {
 		title: 'home'
 	} satisfies MetaTagsProps);
 
-	const releases = await fetchReleases();
-
 	return {
 		pageMetaTags,
-		releases
+		releases: releases as ReleaseContainer[]
 	};
 };

@@ -4,22 +4,34 @@ import { defineConfig, type Plugin } from 'vite';
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { glob } from 'glob/raw';
+import fm from 'front-matter';
+import type { Release, ReleaseContainer, ReleasePalette } from '$lib/types';
+import { Vibrant } from 'node-vibrant/node';
 
-export async function getReleases() {
-	const allReleaseFiles = import.meta.glob('/src/content/releases/*.{md,mdx}');
+async function generateReleases() {
+	const allReleaseFiles = await glob('./src/content/releases/*.{md,mdx}');
+
 	const iterableFiles = Object.entries(allReleaseFiles);
 	const allReleases = await Promise.all(
-		iterableFiles.map(async ([path, resolver]) => {
-			const { metadata } = (await resolver()) as any;
+		iterableFiles.map(async ([key, path]) => {
+			const contents = fs.readFileSync(path, {});
+			if (!fm.test(contents.toString())) return;
+			const parsedDocument = fm(contents.toString());
+			const releaseAttributes = parsedDocument.attributes as Release;
+
+			const safePath = path.replaceAll('\\', '\/');
 			const pathRegex = /^(.+)\/([^\/]+)$/;
-			const releasePathTest = pathRegex.exec(path);
-			const fileName = releasePathTest && releasePathTest[2] ? releasePathTest[2] : path;
-			const isProvidedSlugPath = (pathRegex.exec(metadata.slug)?.length ?? 0) > 0;
-			if (metadata.slug === undefined || isProvidedSlugPath)
-				metadata.slug = fileName.split('.').slice(0, -1).join('.');
+			const releasePathTest = pathRegex.exec(safePath);
+			const fileName = releasePathTest && releasePathTest[2] ? releasePathTest[2] : safePath;
+			const isProvidedSlugPath = (pathRegex.exec(releaseAttributes.slug)?.length ?? 0) > 0;
+			if (releaseAttributes.slug === undefined || isProvidedSlugPath)
+				releaseAttributes.slug = fileName.split('.').slice(0, -1).join('.');
+
 			return {
-				metadata,
-				path: fileName
+				metadata: releaseAttributes,
+				path: safePath,
+				body: parsedDocument.body
 			};
 		})
 	);
@@ -27,38 +39,46 @@ export async function getReleases() {
 	return allReleases;
 }
 
-export const genDataPlugin: Plugin = {
-	name: 'lynndova-gendata',
-	async generateBundle() {
-		const testContent = 'lynn says hi';
-		const releases = await getReleases();
-		const colours = {
-			test: 'hi',
-			test2: 'hi2'
+async function generateColours(releases: ReleaseContainer[]) {
+	let colours: { [key: string]: ReleasePalette } = {};
+	for (const release of releases) {
+		const colourPalette = await Vibrant.from(
+			`https://lynndova.com${release.metadata.icon}`
+		).getPalette();
+
+		colours[release.metadata.slug] = {
+			slug: release.metadata.slug,
+			palette: colourPalette
 		};
+	}
+	return colours;
+}
+
+export const lynndovaDatagenPlugin: Plugin = {
+	name: 'lynndova-datagen',
+	async buildEnd() {
+		const testContent = 'lynn says hi';
+		const releases = await generateReleases();
+		const colours = await generateColours(releases as ReleaseContainer[]);
 
 		const testLocation = path.resolve('./static/test.txt');
-
 		fs.writeFile(testLocation, testContent, {}, () => {
 			console.log(`Generated test file in ${testLocation}`);
 		});
 
 		const releasesLocation = path.resolve('./src/lib/releases.json');
-
 		fs.writeFile(releasesLocation, JSON.stringify(releases), {}, () => {
-			console.log(`Generated ${Object.keys(colours).length} releases to ${location}`);
+			console.log(`Generated ${Object.keys(releases).length} releases to ${releasesLocation}`);
 		});
-
 		const coloursLocation = path.resolve('./src/lib/colours.json');
-
 		fs.writeFile(coloursLocation, JSON.stringify(colours), {}, () => {
-			console.log(`Generated ${Object.keys(colours).length} colours to ${location}`);
+			console.log(`Generated ${Object.keys(colours).length} colours to ${coloursLocation}`);
 		});
 	}
 };
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), genDataPlugin],
+	plugins: [tailwindcss(), sveltekit(), lynndovaDatagenPlugin],
 	resolve: {
 		alias: {
 			fs: 'node:fs',

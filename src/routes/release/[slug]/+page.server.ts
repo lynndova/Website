@@ -1,24 +1,25 @@
-import { fetchReleases } from '$lib';
-import type { Embed, Link, Release } from '$lib/types';
+import type { Embed, Link, ReleaseContainer } from '$lib/types';
 import { error } from '@sveltejs/kit';
 import colours from '$lib/colours.json';
+import releases from '$lib/releases.json';
 
 export async function load({ params, fetch }) {
 	const requestedSlug = params.slug;
-	const releases = await fetchReleases();
 
-	const requestedRelease = releases.find((release) => release.metadata.slug === requestedSlug);
+	const requestedRelease = releases.find((release) => release.metadata.slug === requestedSlug) as
+		| ReleaseContainer
+		| undefined;
 	if (requestedRelease === undefined)
 		error(404, {
 			message: 'Release not found'
 		});
 
-	const metadata: Release = requestedRelease.metadata;
-
 	const embeds: Embed[] = [];
 
 	// Bandcamp Embeds
-	const bcUrl = metadata.links.find((link: Link) => link.name.toLowerCase() === 'bandcamp');
+	const bcUrl = requestedRelease.metadata.links.find(
+		(link: Link) => link.name.toLowerCase() === 'bandcamp'
+	);
 	if (bcUrl !== undefined) {
 		const bcResponse = await fetch(bcUrl.to, {
 			headers: {
@@ -39,7 +40,9 @@ export async function load({ params, fetch }) {
 	}
 
 	// YouTube Embeds
-	const ytUrl = metadata.links.find((link: Link) => link.name.toLowerCase() === 'youtube');
+	const ytUrl = requestedRelease.metadata.links.find(
+		(link: Link) => link.name.toLowerCase() === 'youtube'
+	);
 	if (ytUrl !== undefined) {
 		const ytRegex =
 			/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*?[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
@@ -55,5 +58,9 @@ export async function load({ params, fetch }) {
 		}
 	}
 
-	return { embeds, requestedRelease, metadata, colours: JSON.stringify(colours) };
+	return {
+		embeds,
+		release: requestedRelease,
+		colours: JSON.stringify(colours)
+	};
 }

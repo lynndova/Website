@@ -1,6 +1,6 @@
 import type { ServerInit } from '@sveltejs/kit';
 import fs from 'node:fs';
-import { generateColours } from '$lib/server/colours';
+/*import { generateColours } from '$lib/server/colours';
 
 export const init: ServerInit = async () => {
 	const location = import.meta.resolve('./lib/colours.json');
@@ -10,3 +10,4 @@ export const init: ServerInit = async () => {
 		console.log(`Generated ${Object.keys(colours).length} release colours to ${location}`);
 	});
 };
+*/
