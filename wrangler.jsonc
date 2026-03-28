@@ -3,5 +3,8 @@
 	"name": "lynndova-website",
 	"pages_build_output_dir": ".svelte-kit/cloudflare",
 	"compatibility_date": "2025-11-17",
-	"compatibility_flags": ["nodejs_compat"]
+	"compatibility_flags": ["nodejs_compat"],
+	"vars": {
+		"NODE_VERSION": "24.14.1"
+	}
 }
