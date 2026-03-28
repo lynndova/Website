@@ -15,21 +15,21 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.1",
-		"@sveltejs/adapter-cloudflare": "^7.2.7",
-		"@sveltejs/kit": "^2.52.0",
-		"@sveltejs/vite-plugin-svelte": "^5.1.1",
-		"@tailwindcss/vite": "^4.1.18",
+		"@sveltejs/adapter-cloudflare": "^7.2.8",
+		"@sveltejs/kit": "^2.55.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@tailwindcss/vite": "^4.2.2",
 		"@types/chroma-js": "^3.1.2",
 		"prettier": "^3.8.1",
-		"prettier-plugin-svelte": "^3.4.1",
-		"prettier-plugin-tailwindcss": "^0.6.14",
+		"prettier-plugin-svelte": "^3.5.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
 		"sv-tooltip": "^0.2.5",
-		"svelte": "^5.51.2",
-		"svelte-check": "^4.4.0",
-		"svelte-meta-tags": "^4.5.0",
-		"tailwindcss": "^4.1.18",
-		"typescript": "^5.9.3",
-		"vite": "^7.3.1"
+		"svelte": "^5.55.0",
+		"svelte-check": "^4.4.5",
+		"svelte-meta-tags": "^4.5.1",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.3"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
@@ -39,14 +39,14 @@
 	"dependencies": {
 		"@fontsource-variable/dm-sans": "^5.2.8",
 		"@fontsource-variable/inter": "^5.2.8",
-		"@icons-pack/svelte-simple-icons": "^6.5.0",
-		"@lucide/svelte": "^0.503.0",
+		"@icons-pack/svelte-simple-icons": "^7.2.0",
+		"@lucide/svelte": "^1.7.0",
 		"@vibrant/color": "^4.0.4",
 		"chroma-js": "^3.2.0",
 		"front-matter": "^4.0.2",
-		"glob": "^13.0.3",
-		"mdsvex": "^0.12.6",
+		"glob": "^13.0.6",
+		"mdsvex": "^0.12.7",
 		"node-vibrant": "^4.0.4",
-		"wrangler": "^4.65.0"
+		"wrangler": "^4.78.0"
 	}
 }

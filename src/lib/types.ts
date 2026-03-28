@@ -14,11 +14,18 @@ export type Release = {
 	summary: string;
 	colour: HexColour;
 	links: Link[];
+	collaborators?: Collaborator[];
 };
 
 export type Link = {
 	name: string;
 	to: string;
+};
+
+export type Collaborator = {
+	name: string;
+	icon: string;
+	url: string;
 };
 
 export type Embed = {

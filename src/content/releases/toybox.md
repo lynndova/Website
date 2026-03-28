@@ -12,6 +12,16 @@ links:
     to: 'https://open.spotify.com/album/2DXNbNyNRV0VOsKdLXiyjs'
   - name: 'Apple Music'
     to: 'https://music.apple.com/album/modfest-toybox-original-modpack-soundtrack/1837021377'
+collaborators:
+  - name: 'Aethyus'
+    icon: 'https://f4.bcbits.com/img/0038894602_21.jpg'
+    url: 'https://aethyus.bandcamp.com/'
+  - name: 'Nulb'
+    icon: 'https://f4.bcbits.com/img/0035740782_10.jpg'
+    url: 'https://nulb.co.uk'
+  - name: 'Superkat32'
+    icon: 'https://avatars.githubusercontent.com/u/89557012'
+    url: 'https://modrinth.com/user/Superkat32'
 ---
 
 ## ModFest: Toybox was a Minecraft modding event where participants had one goal: to make a toy!

@@ -65,8 +65,44 @@
 	<div
 		class="flex w-full flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-between"
 	>
-		<div class="md">
-			{@render data.content()}
+		<div>
+			{#if release.collaborators && release.collaborators.length > 0}
+				<div
+					class="flex flex-col gap-3 rounded-xl border px-4 py-3"
+					style="border-color: {rgbToHex(
+						...colour.palette.DarkMuted.rgb
+					)}; background-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}50"
+				>
+					<span class="text-md font-bold"
+						>This is a <span style="color: {rgbToHex(...colour.palette.LightVibrant.rgb)}"
+							>collab album</span
+						>. Check out these other fine folks who helped out with this!</span
+					>
+
+					<hr style="border-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}" />
+
+					<div class="flex flex-row flex-wrap items-center gap-2">
+						{#each release.collaborators as collaborator}
+							<a
+								style="border-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}AA"
+								class="bg-dova-background-secondary flex flex-row items-center gap-4 rounded-2xl border px-3 py-1 no-underline! transition hover:brightness-80 active:scale-95"
+								target="_blank"
+								href={collaborator.url}
+							>
+								<img
+									class="bg-dova-background-secondary size-12 rounded-full border-2 shadow-md"
+									alt="Avatar of {collaborator.name}"
+									src={collaborator.icon}
+								/>
+								<span class="text-md font-bold">{collaborator.name}</span>
+							</a>
+						{/each}
+					</div>
+				</div>
+			{/if}
+			<div class="md">
+				{@render data.content()}
+			</div>
 		</div>
 		<div class="flex flex-col items-center gap-2 lg:items-start">
 			{#if data.embeds.length > 0}
