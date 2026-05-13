@@ -13,7 +13,7 @@ export async function GET({ params }) {
 	const feed = new Feed({
 		title: 'lynndova Releases',
 		description: 'Music releases from lynndova',
-		id: 'https://lynndova.com',
+		id: 'https://lynndova.com/',
 		link: 'https://lynndova.com',
 		language: 'en',
 		image: 'https://lynndova.com/img/lynndova.png',
