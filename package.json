@@ -43,6 +43,7 @@
 		"@lucide/svelte": "^1.7.0",
 		"@vibrant/color": "^4.0.4",
 		"chroma-js": "^3.2.0",
+		"feed": "^5.2.1",
 		"front-matter": "^4.0.2",
 		"glob": "^13.0.6",
 		"mdsvex": "^0.12.7",
