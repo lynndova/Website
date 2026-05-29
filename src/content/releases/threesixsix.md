@@ -1,7 +1,7 @@
 ---
 title: '366'
 slug: '366'
-icon: '/img/music/366.png'
+icon: 'https://azalea.lynndova.com/releases/2024/366/cover_512x.png'
 date: '2024-12-31'
 summary: 'From respectably ridiculous to properly pretty, this is 366.'
 colour: '#fb464f'

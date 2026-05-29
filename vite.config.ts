@@ -42,9 +42,7 @@ async function generateReleases() {
 async function generateColours(releases: ReleaseContainer[]) {
 	let colours: { [key: string]: ReleasePalette } = {};
 	for (const release of releases) {
-		const colourPalette = await Vibrant.from(
-			`https://lynndova.com${release.metadata.icon}`
-		).getPalette();
+		const colourPalette = await Vibrant.from(release.metadata.icon).getPalette();
 
 		colours[release.metadata.slug] = {
 			slug: release.metadata.slug,

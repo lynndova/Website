@@ -1,6 +1,5 @@
 import { Feed } from 'feed';
 import releases from '$lib/releases.json';
-import type { Release, ReleaseContainer } from '$lib/types.js';
 import { error, text } from '@sveltejs/kit';
 
 export async function GET({ params }) {

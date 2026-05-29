@@ -1,6 +1,6 @@
 ---
 title: 'Wildflower'
-icon: '/img/music/wildflower.png'
+icon: 'https://azalea.lynndova.com/releases/2024/wildflower/cover_512x.png'
 date: '2024-03-26'
 summary: "You've got to start somewhere."
 colour: '#a100ff'

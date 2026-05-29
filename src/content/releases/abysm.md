@@ -1,6 +1,6 @@
 ---
 title: 'Abysm'
-icon: '/img/music/abysm.png'
+icon: 'https://azalea.lynndova.com/releases/2025/abysm/cover_512x.png'
 date: '2025-08-27'
 summary: 'Something stirs in the depths. Its call demands an answer.'
 colour: '#bd68f4'

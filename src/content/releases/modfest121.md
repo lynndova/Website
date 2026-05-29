@@ -1,7 +1,7 @@
 ---
 title: 'ModFest 1​.​21: Time, Technology, & Throwbacks (Original Modpack Soundtrack)'
 slug: 'modfest-121-time-technology-throwbacks-original-modpack-soundtrack'
-icon: '/img/music/modfest121.png'
+icon: 'https://azalea.lynndova.com/releases/2024/modfest121/cover_512x.png'
 date: '2024-11-28'
 summary: 'Enjoy the tunes that line the time walls of Stasis! By Nulb, lumiscosity and WorldWidePixel.'
 colour: '#dd604a'
@@ -14,10 +14,10 @@ links:
     to: 'https://music.apple.com/album/modfest-1-21-time-technology-throwbacks-original-modpack/1782835845'
 collaborators:
   - name: 'lumiscosity'
-    icon: 'https://lumiscosity.neocities.org/assets/maple.png'
+    icon: 'https://azalea.lynndova.com/people/lumiscosity/icon_512x.png'
     url: 'https://lumiscosity.neocities.org'
   - name: 'Nulb'
-    icon: 'https://f4.bcbits.com/img/0035740782_10.jpg'
+    icon: 'https://azalea.lynndova.com/people/nulb/icon_512x.png'
     url: 'https://nulb.co.uk'
 ---
 

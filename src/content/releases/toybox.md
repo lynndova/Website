@@ -1,7 +1,7 @@
 ---
 title: 'ModFest: Toybox (Original Modpack Soundtrack)'
 slug: 'modfest-toybox-original-modpack-soundtrack'
-icon: '/img/music/toybox.png'
+icon: 'https://azalea.lynndova.com/releases/2025/toybox/cover_512x.png'
 date: '2025-09-05'
 summary: 'Jam to the tunes of the Toybox!'
 colour: '#f42664'
@@ -14,13 +14,13 @@ links:
     to: 'https://music.apple.com/album/modfest-toybox-original-modpack-soundtrack/1837021377'
 collaborators:
   - name: 'Aethyus'
-    icon: 'https://f4.bcbits.com/img/0038894602_21.jpg'
+    icon: 'https://azalea.lynndova.com/people/aethyus/icon_512x.png'
     url: 'https://aethyus.bandcamp.com/'
   - name: 'Nulb'
-    icon: 'https://f4.bcbits.com/img/0035740782_10.jpg'
+    icon: 'https://azalea.lynndova.com/people/nulb/icon_512x.png'
     url: 'https://nulb.co.uk'
   - name: 'Superkat32'
-    icon: 'https://avatars.githubusercontent.com/u/89557012'
+    icon: 'https://azalea.lynndova.com/people/superkat32/icon_512x.png'
     url: 'https://modrinth.com/user/Superkat32'
 ---
 
