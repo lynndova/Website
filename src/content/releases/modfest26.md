@@ -9,9 +9,9 @@ links:
   - name: 'Bandcamp'
     to: 'https://modfest.bandcamp.com/album/modfest-26-animation-affection-academia-original-modpack-soundtrack'
   - name: 'Spotify'
-    to: '#'
+    to: 'https://open.spotify.com/album/0paDLG0u0Cgw31XMtYQv4F'
   - name: 'Apple Music'
-    to: '#'
+    to: 'https://music.apple.com/ca/album/modfest-26-animation-affection-academia-original-modpack/6774150958'
 collaborators:
   - name: 'Aethyus'
     icon: 'https://azalea.lynndova.com/people/aethyus/icon_512x.png'
