@@ -15,7 +15,7 @@ links:
 collaborators:
   - name: 'Aethyus'
     icon: 'https://azalea.lynndova.com/people/aethyus/icon_512x.png'
-    url: 'https://erora.live'
+    url: 'https://aethyus.bandcamp.com/'
   - name: 'Jaevy'
     icon: 'https://azalea.lynndova.com/people/jaevy/icon_512x.png'
     url: 'https://linktr.ee/wavyjaevy'
