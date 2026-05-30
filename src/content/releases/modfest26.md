@@ -48,4 +48,6 @@ Mastering:
 
 Album Art
 
+- Aethyus
 - Jaevy
+- VirtualLilith
