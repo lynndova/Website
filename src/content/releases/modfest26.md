@@ -9,7 +9,7 @@ links:
   - name: 'Bandcamp'
     to: 'https://modfest.bandcamp.com/album/modfest-26-animation-affection-academia-original-modpack-soundtrack'
   - name: 'Spotify'
-    to: 'https://open.spotify.com/album/0paDLG0u0Cgw31XMtYQv4F'
+    to: 'https://open.spotify.com/album/6mQqiwLrqvF3RFyghgl05i'
   - name: 'Apple Music'
     to: 'https://music.apple.com/ca/album/modfest-26-animation-affection-academia-original-modpack/6774150958'
 collaborators:
