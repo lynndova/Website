@@ -2,9 +2,9 @@
 	import releases from '$lib/releases.json';
 	import Logo from '$lib/brand/Logo.svelte';
 	import AlbumCard from '$lib/ui/AlbumCard.svelte';
-	import BigIconLink from '$lib/ui/BigIconLink.svelte';
 	import { SiBandcamp, SiBluesky, SiSoundcloud, SiSpotify } from '@icons-pack/svelte-simple-icons';
 	import type { ReleaseContainer } from '$lib/types.js';
+	import LinkButton from '$lib/ui/LinkButton.svelte';
 
 	const { data: dataGet } = $props();
 
@@ -23,19 +23,17 @@
 	</div>
 
 	<span class="flex flex-row flex-wrap items-center justify-center gap-3">
-		<BigIconLink text="Bandcamp" to="https://lynndova.bandcamp.com" external={true}
-			><SiBandcamp size={20} /></BigIconLink
+		<LinkButton to="https://lynndova.bandcamp.com" external
+			><SiBandcamp size={20} /> Bandcamp</LinkButton
 		>
-		<BigIconLink
-			text="Spotify"
-			to="https://open.spotify.com/artist/3WlVCLjjg29ftwvau9WUVs"
-			external={true}><SiSpotify size={20} /></BigIconLink
+		<LinkButton to="https://open.spotify.com/artist/3WlVCLjjg29ftwvau9WUVs" external
+			><SiSpotify size={20} /> Spotify</LinkButton
 		>
-		<BigIconLink text="SoundCloud" to="https://soundcloud.com/lynndova" external={true}
-			><SiSoundcloud size={20} /></BigIconLink
+		<LinkButton to="https://soundcloud.com/lynndova" external
+			><SiSoundcloud size={20} /> SoundCloud</LinkButton
 		>
-		<BigIconLink text="Bluesky" to="https://bsky.app/profile/lynndova.com" external={true}
-			><SiBluesky size={20} /></BigIconLink
+		<LinkButton to="https://bsky.app/profile/lynndova.com" external
+			><SiBluesky size={20} /> Bluesky</LinkButton
 		>
 	</span>
 	<hr class="w-full" />

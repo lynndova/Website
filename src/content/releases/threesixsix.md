@@ -8,10 +8,30 @@ colour: '#fb464f'
 links:
   - name: 'Bandcamp'
     to: 'https://lynndova.bandcamp.com/album/366'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/4L894K0dnCGhjzCAiz5dvf'
+    options:
+      - 'download'
+      - 'stream'
   - name: 'Apple Music'
     to: 'https://music.apple.com/album/366-ep/1788000821'
+    options:
+      - 'stream'
+  - name: 'Qobuz'
+    to: 'https://play.qobuz.com/album/xijve2kt29k5a'
+    options:
+      - 'buy'
+      - 'stream'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/4L894K0dnCGhjzCAiz5dvf'
+    options:
+      - 'stream'
+  - name: 'TIDAL'
+    to: 'https://tidal.com/album/408335221'
+    options:
+      - 'stream'
+  - name: 'YouTube Music'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_lNZzVV_8qEHB34H8yuJ362zk524L4YydM'
+    options:
+      - 'stream'
 ---
 
 ## From respectably ridiculous to properly pretty, this is 366.

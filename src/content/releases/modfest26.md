@@ -7,11 +7,32 @@ summary: "it's (anime) highschool (romance)!"
 colour: '#6b533f'
 links:
   - name: 'Bandcamp'
+    options:
+      - 'buy'
+      - 'download'
+      - 'stream'
     to: 'https://modfest.bandcamp.com/album/modfest-26-animation-affection-academia-original-modpack-soundtrack'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/6mQqiwLrqvF3RFyghgl05i'
   - name: 'Apple Music'
+    options:
+      - 'stream'
     to: 'https://music.apple.com/ca/album/modfest-26-animation-affection-academia-original-modpack/6775465189'
+  - name: 'Qobuz'
+    options:
+      - 'buy'
+      - 'stream'
+    to: 'https://play.qobuz.com/album/y6w4c1neweu3s'
+  - name: 'Spotify'
+    options:
+      - 'stream'
+    to: 'https://open.spotify.com/album/6mQqiwLrqvF3RFyghgl05i'
+  - name: 'TIDAL'
+    options:
+      - 'stream'
+    to: 'https://tidal.com/album/529699041'
+  - name: 'YouTube Music'
+    options:
+      - 'stream'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_mIj6ou3My0OD1iBwGOS92Wa18GzEEqyrk'
 collaborators:
   - name: 'Aethyus'
     icon: 'https://azalea.lynndova.com/people/aethyus/icon_512x.png'

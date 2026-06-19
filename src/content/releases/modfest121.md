@@ -8,10 +8,35 @@ colour: '#dd604a'
 links:
   - name: 'Bandcamp'
     to: 'https://modfest.bandcamp.com/album/modfest-121-time-technology-throwbacks-original-modpack-soundtrack'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/41JJf6dc5RPNPKHSQE9j1x'
+    options:
+      - 'buy'
+      - 'download'
+      - 'stream'
   - name: 'Apple Music'
     to: 'https://music.apple.com/album/modfest-1-21-time-technology-throwbacks-original-modpack/1782835845'
+    options:
+      - 'stream'
+  - name: 'Qobuz'
+    to: 'https://play.qobuz.com/album/hmnwnyqcfvtwb'
+    options:
+      - 'buy'
+      - 'stream'
+  - name: 'SoundCloud'
+    to: 'https://soundcloud.com/modfest/sets/modfest-121'
+    options:
+      - 'stream'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/41JJf6dc5RPNPKHSQE9j1x'
+    options:
+      - 'stream'
+  - name: 'TIDAL'
+    to: 'https://tidal.com/album/402839900'
+    options:
+      - 'stream'
+  - name: 'YouTube Music'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_kLhkyXz-5H1krX86OZ104UP_3-QeHAMbs'
+    options:
+      - 'stream'
 collaborators:
   - name: 'lumiscosity'
     icon: 'https://azalea.lynndova.com/people/lumiscosity/icon_512x.png'

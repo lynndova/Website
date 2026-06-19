@@ -1,4 +1,4 @@
-import type { Embed, Link, ReleaseContainer } from '$lib/types';
+import type { Embed, Link, ReleaseContainer, ReleaseLink } from '$lib/types';
 import { error } from '@sveltejs/kit';
 import colours from '$lib/colours.json';
 import releases from '$lib/releases.json';
@@ -18,7 +18,7 @@ export async function load({ params, fetch }) {
 
 	// Bandcamp Embeds
 	const bcUrl = requestedRelease.metadata.links.find(
-		(link: Link) => link.name.toLowerCase() === 'bandcamp'
+		(link: ReleaseLink) => link.name.toLowerCase() === 'bandcamp'
 	);
 	if (bcUrl !== undefined) {
 		const bcResponse = await fetch(bcUrl.to, {
@@ -41,7 +41,7 @@ export async function load({ params, fetch }) {
 
 	// YouTube Embeds
 	const ytUrl = requestedRelease.metadata.links.find(
-		(link: Link) => link.name.toLowerCase() === 'youtube'
+		(link: ReleaseLink) => link.name.toLowerCase() === 'youtube'
 	);
 	if (ytUrl !== undefined) {
 		const ytRegex =

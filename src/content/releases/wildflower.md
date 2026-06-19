@@ -7,10 +7,34 @@ colour: '#a100ff'
 links:
   - name: 'Bandcamp'
     to: 'https://lynndova.bandcamp.com/album/wildflower'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/4M4e76UmfVYmu502ETYlri'
+    options:
+      - 'download'
+      - 'stream'
   - name: 'Apple Music'
     to: 'https://music.apple.com/album/wildflower-ep/1780496177'
+    options:
+      - 'stream'
+  - name: 'Qobuz'
+    to: 'https://play.qobuz.com/album/aqxpuj1dp3cla'
+    options:
+      - 'buy'
+      - 'stream'
+  - name: 'SoundCloud'
+    to: 'https://soundcloud.com/lynndova/sets/wildflower'
+    options:
+      - 'stream'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/4M4e76UmfVYmu502ETYlri'
+    options:
+      - 'stream'
+  - name: 'TIDAL'
+    to: 'https://tidal.com/album/400233051'
+    options:
+      - 'stream'
+  - name: 'YouTube Music'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_ld-PlUMjF5GJYewECwkJanLxSgCbHF1mU'
+    options:
+      - 'stream'
 ---
 
 ## You've got to start somewhere.

@@ -7,11 +7,32 @@ summary: 'Jam to the tunes of the Toybox!'
 colour: '#f42664'
 links:
   - name: 'Bandcamp'
+    options:
+      - 'buy'
+      - 'download'
+      - 'stream'
     to: 'https://modfest.bandcamp.com/album/modfest-toybox-original-modpack-soundtrack'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/2DXNbNyNRV0VOsKdLXiyjs'
   - name: 'Apple Music'
-    to: 'https://music.apple.com/album/modfest-toybox-original-modpack-soundtrack/1837021377'
+    options:
+      - 'stream'
+    to: 'https://music.apple.com/ca/album/modfest-toybox-original-modpack-soundtrack/1837021377'
+  - name: 'Qobuz'
+    options:
+      - 'buy'
+      - 'stream'
+    to: 'https://play.qobuz.com/album/ly3xy38rw5ojb'
+  - name: 'Spotify'
+    options:
+      - 'stream'
+    to: 'https://open.spotify.com/album/2DXNbNyNRV0VOsKdLXiyjs'
+  - name: 'TIDAL'
+    options:
+      - 'stream'
+    to: 'https://tidal.com/album/457436989'
+  - name: 'YouTube Music'
+    options:
+      - 'stream'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_mIp9ZY4w8hxiRI_4xCMIhpnjPTRT42BGA'
 collaborators:
   - name: 'Aethyus'
     icon: 'https://azalea.lynndova.com/people/aethyus/icon_512x.png'

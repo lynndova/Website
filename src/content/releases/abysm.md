@@ -6,15 +6,39 @@ summary: 'Something stirs in the depths. Its call demands an answer.'
 colour: '#bd68f4'
 links:
   - name: 'Bandcamp'
+    options:
+      - 'download'
+      - 'stream'
     to: 'https://lynndova.bandcamp.com/album/abysm'
-  - name: 'YouTube'
-    to: 'https://www.youtube.com/watch?v=L5bKHAQknAM'
+  - name: 'Apple Music'
+    options:
+      - 'stream'
+    to: 'https://music.apple.com/album/abysm/1851252105'
+  - name: 'Qobuz'
+    options:
+      - 'buy'
+      - 'stream'
+    to: 'https://play.qobuz.com/album/zgy51strj1odb'
   - name: 'SoundCloud'
+    options:
+      - 'stream'
     to: 'https://soundcloud.com/lynndova/sets/abysm'
   - name: 'Spotify'
+    options:
+      - 'stream'
     to: 'https://open.spotify.com/album/29Mkr7HwR4KgnDx1HlyE1B'
-  - name: 'Apple Music'
-    to: 'https://music.apple.com/album/abysm/1851252105'
+  - name: 'TIDAL'
+    options:
+      - 'stream'
+    to: 'https://tidal.com/album/471358551'
+  - name: 'YouTube'
+    options:
+      - 'stream'
+    to: 'https://www.youtube.com/watch?v=L5bKHAQknAM'
+  - name: 'YouTube Music'
+    options:
+      - 'stream'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_lXnE9RAlcnuADhhnHNYCwQNBbBc6_DPm0'
 ---
 
 ## Something stirs in the depths. Its call demands an answer.

@@ -189,10 +189,19 @@
 	h3:not(.md h3) {
 		@apply text-dova-text-strong my-1 text-3xl font-extrabold tracking-tight;
 	}
+
+	td,
+	th {
+		@apply px-2 py-1;
+	}
+
+	th {
+		@apply text-left;
+	}
 }
 
 html {
-	@apply bg-dova-background text-dova-text h-full;
+	@apply bg-dova-background text-dova-text h-full scroll-smooth;
 }
 
 @tailwind utilities;

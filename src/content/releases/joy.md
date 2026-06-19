@@ -7,10 +7,34 @@ colour: '#09309d'
 links:
   - name: 'Bandcamp'
     to: 'https://lynndova.bandcamp.com/album/joy'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/1aEjkFTr3QRurQHKJv7iE9'
+    options:
+      - 'download'
+      - 'stream'
   - name: 'Apple Music'
     to: 'https://music.apple.com/us/album/joy-ep/1780127966'
+    options:
+      - 'stream'
+  - name: 'Qobuz'
+    to: 'https://play.qobuz.com/album/ohrk6ld5v44eb'
+    options:
+      - 'buy'
+      - 'stream'
+  - name: 'SoundCloud'
+    to: 'https://soundcloud.com/lynndova/sets/joy'
+    options:
+      - 'stream'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/1aEjkFTr3QRurQHKJv7iE9'
+    options:
+      - 'stream'
+  - name: 'TIDAL'
+    to: 'https://tidal.com/album/399690716'
+    options:
+      - 'stream'
+  - name: 'YouTube Music'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_kfxGveoWuDtMsPY-U4SvqfQBnrzbwfFlY'
+    options:
+      - 'stream'
 ---
 
 ## You know what? Why not make something lovely?

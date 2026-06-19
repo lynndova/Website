@@ -4,8 +4,18 @@
 	import { dev } from '$app/environment';
 	import { formatDate } from '$lib';
 	import type { IncompleteNodeVibrantPalette, Release } from '$lib/types.js';
-	import BigIconLink from '$lib/ui/BigIconLink.svelte';
 	import { rgbToHex } from '@vibrant/color';
+	import {
+		SiApplemusic,
+		SiBandcamp,
+		SiSoundcloud,
+		SiSpotify,
+		SiTidal,
+		SiYoutube,
+		SiYoutubemusic
+	} from '@icons-pack/svelte-simple-icons';
+	import { ArrowDown, Disc3, ExternalLink } from '@lucide/svelte';
+	import LinkButton from '$lib/ui/LinkButton.svelte';
 
 	let { data } = $props();
 
@@ -22,10 +32,15 @@
 	const colour: { palette: IncompleteNodeVibrantPalette } = data.colours[release.slug];
 </script>
 
-<div class="flex flex-col gap-8 py-16 text-sm">
+<div
+	style="--release-dark-muted: {rgbToHex(
+		...colour.palette.DarkMuted.rgb
+	)}; --release-dark-vibrant: {rgbToHex(...colour.palette.DarkVibrant.rgb)}"
+	class="flex flex-col gap-8 py-16 text-sm"
+>
 	<img
 		draggable="false"
-		style="borderColor: color-mix(in oklab, {release.colour}, transparent 80%"
+		style="borderColor: color-mix(in oklch, {release.colour}, transparent 80%"
 		class="mx-auto block size-56 rounded-md border shadow-2xl md:hidden"
 		src={release.icon}
 		alt="{release.title} album cover"
@@ -33,7 +48,7 @@
 	<div class="grid grid-cols-1 grid-rows-[auto_auto] gap-x-6 gap-y-4 md:grid-cols-[12rem_auto]">
 		<img
 			draggable="false"
-			style="borderColor: color-mix(in oklab, {release.colour}, transparent 80%"
+			style="borderColor: color-mix(in oklch, {release.colour}, transparent 80%"
 			class="row-start-2 hidden size-48 rounded-md border shadow-2xl md:block"
 			src={release.icon}
 			alt="{release.title} album cover"
@@ -47,17 +62,17 @@
 			<span>
 				{release.summary}
 			</span>
-			<div class="flex flex-row flex-wrap items-center gap-3">
-				{#each release.links as link}
-					<BigIconLink
-						text={link.name}
-						to={link.to}
-						external={true}
-						showIcon={true}
-						style="border-bottom-color: color-mix(in oklab, {release.colour}, transparent 80%)"
-						classList="bg-opacity-50 bg-brand-background-secondary border-b-[1px]"
-					/>
-				{/each}
+			<div>
+				<span class="flex flex-row flex-wrap items-center gap-3">
+					{#each release.links.slice(0, 2) as link}
+						<LinkButton showIcon external accent={release.colour} to={link.to}
+							>{link.name}</LinkButton
+						>
+					{/each}
+					<LinkButton accent={release.colour} to="#available-on"
+						>More services <ArrowDown /></LinkButton
+					>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -65,13 +80,13 @@
 	<div
 		class="flex w-full flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-between"
 	>
-		<div>
+		<div class="w-full max-w-2xl">
+			<h3 class="mb-6! border-b" id="about">About</h3>
+
 			{#if release.collaborators && release.collaborators.length > 0}
 				<div
 					class="flex flex-col gap-3 rounded-xl border px-4 py-3"
-					style="border-color: {rgbToHex(
-						...colour.palette.DarkMuted.rgb
-					)}; background-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}50"
+					style="border-color: var(--release-dark-muted); background-color: color-mix(in oklch, var(--release-dark-muted) 20%, transparent);"
 				>
 					<span class="text-md font-bold"
 						>This is a <span style="color: {rgbToHex(...colour.palette.LightVibrant.rgb)}"
@@ -100,13 +115,60 @@
 					</div>
 				</div>
 			{/if}
-			<div class="md">
+			<article class="md">
 				{@render data.content()}
+			</article>
+			<h3 class="my-6! border-b" id="available-on">Available on</h3>
+
+			<div
+				style="background-color: color-mix(in oklch, var(--release-dark-muted) 30%, transparent);"
+				class="bg-dova-background-secondary mt-6 flex flex-col rounded-xl border px-4 py-3"
+			>
+				<table style="border-color: var(--release-dark-muted);">
+					<thead>
+						<tr>
+							<th class="text-lg">Service</th>
+							<th class="text-lg">Links</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#each release.links.sort((a, b) => a.name.localeCompare(b.name)) as link}
+							<tr>
+								<td class="flex flex-row items-center gap-2 text-lg font-bold tracking-tight">
+									{#if link.name === 'Apple Music'}
+										<SiApplemusic />
+									{:else if link.name === 'Bandcamp'}
+										<SiBandcamp />
+									{:else if link.name === 'SoundCloud'}
+										<SiSoundcloud />
+									{:else if link.name === 'Spotify'}
+										<SiSpotify />
+									{:else if link.name === 'TIDAL'}
+										<SiTidal />
+									{:else if link.name === 'YouTube'}
+										<SiYoutube />
+									{:else if link.name === 'YouTube Music'}
+										<SiYoutubemusic />
+									{:else}
+										<Disc3 />
+									{/if}
+									{link.name}
+								</td>
+								<td>
+									<a class="flex w-fit flex-row items-center gap-1" target="_blank" href={link.to}>
+										{link.options?.join(', ')}
+										<ExternalLink size={16} />
+									</a>
+								</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
 			</div>
 		</div>
-		<div class="flex flex-col items-center gap-2 lg:items-start">
+		<div class="top-2 flex w-full flex-col items-center gap-2 lg:sticky lg:w-fit">
 			{#if data.embeds.length > 0}
-				<h3 class="w-fit px-2">Listen</h3>
+				<h3 class="w-full max-w-2xl border-b px-2 lg:mb-2!">Listen</h3>
 			{/if}
 			{#if hasBandcamp}
 				<div class="flex w-fit flex-col gap-1">
@@ -198,3 +260,12 @@
 		</div>
 	{/if}
 {/if}
+
+<style>
+	thead > tr {
+		background-color: var(--release-dark-muted) !important;
+	}
+	tr:nth-child(odd) {
+		background-color: color-mix(in oklch, var(--release-dark-muted) 20%, transparent);
+	}
+</style>

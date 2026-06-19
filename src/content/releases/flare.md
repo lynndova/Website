@@ -7,10 +7,29 @@ colour: '#fd7369'
 links:
   - name: 'Bandcamp'
     to: 'https://lynndova.bandcamp.com/album/flare'
-  - name: 'Spotify'
-    to: 'https://open.spotify.com/album/1ooh1yiUJ3KCihqnif6qk7'
+    options:
+      - 'download'
+      - 'stream'
   - name: 'Apple Music'
     to: 'https://music.apple.com/album/flare-ep/1780991075'
+    options:
+      - 'stream'
+  - name: 'SoundCloud'
+    to: 'https://soundcloud.com/lynndova/sets/flare'
+    options:
+      - 'stream'
+  - name: 'Spotify'
+    to: 'https://open.spotify.com/album/1ooh1yiUJ3KCihqnif6qk7'
+    options:
+      - 'stream'
+  - name: 'TIDAL'
+    to: 'https://tidal.com/album/400684460'
+    options:
+      - 'stream'
+  - name: 'YouTube Music'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_kz94JY5oJegSq4i3tfS9xKLA-ewaVIddQ'
+    options:
+      - 'stream'
 ---
 
 ## Everything that doesn't 'belong' somewhere. Full of failures, rejects, and firsts.

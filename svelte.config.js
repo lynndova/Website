@@ -7,9 +7,11 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	extensions: ['.svelte', '.mdx', '.md'],
-	preprocess: mdsvex({
-		extensions: ['.mdx', '.md']
-	}),
+	preprocess: [
+		mdsvex({
+			extensions: ['.mdx', '.md']
+		})
+	],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.

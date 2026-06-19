@@ -13,7 +13,7 @@ export type Release = {
 	date: string;
 	summary: string;
 	colour: HexColour;
-	links: Link[];
+	links: ReleaseLink[];
 	collaborators?: Collaborator[];
 };
 
@@ -21,6 +21,12 @@ export type Link = {
 	name: string;
 	to: string;
 };
+
+export type ReleaseLink = Link & {
+	options?: ConsumptionOptions[];
+};
+
+export type ConsumptionOptions = 'buy' | 'download' | 'stream';
 
 export type Collaborator = {
 	name: string;
