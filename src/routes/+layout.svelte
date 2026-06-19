@@ -39,8 +39,8 @@
 	</main>
 	<footer class="bg-dova-background-secondary flex w-full flex-row justify-center border-t">
 		<div class="flex w-full max-w-6xl flex-col items-center gap-4 p-6 text-sm">
-			<span>copyright lynndova (2025 - {new Date().getFullYear()}) &bull; <a href="/contact">contact</a></span>
-			<a class="text-dova-blue-1" href="https://worldwidepixel.ca">see me elsewhere</a>
+			<span>copyright & &copysr; lynndova (2025 - {new Date().getFullYear()})</span>
+			<span><a href="/contact">contact</a> &bull; <a href="/use">using my music</a></span>
 		</div>
 	</footer>
 </div>

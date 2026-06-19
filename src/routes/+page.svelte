@@ -45,5 +45,4 @@
 			<AlbumCard data={release.metadata} />
 		{/each}
 	</div>
-	<a href="/use">Music usage guidelines</a>
 </div>
