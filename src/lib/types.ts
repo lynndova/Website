@@ -15,6 +15,7 @@ export type Release = {
 	colour: HexColour;
 	links: ReleaseLink[];
 	collaborators?: Collaborator[];
+	atUri?: string;
 };
 
 export type Link = {

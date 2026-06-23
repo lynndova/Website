@@ -39,6 +39,7 @@ links:
     options:
       - 'stream'
     to: 'https://music.youtube.com/playlist?list=OLAK5uy_lXnE9RAlcnuADhhnHNYCwQNBbBc6_DPm0'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw5ynr42b"
 ---
 
 ## Something stirs in the depths. Its call demands an answer.

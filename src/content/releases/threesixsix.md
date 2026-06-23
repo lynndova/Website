@@ -32,6 +32,7 @@ links:
     to: 'https://music.youtube.com/playlist?list=OLAK5uy_lNZzVV_8qEHB34H8yuJ362zk524L4YydM'
     options:
       - 'stream'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw6byif2r"
 ---
 
 ## From respectably ridiculous to properly pretty, this is 366.

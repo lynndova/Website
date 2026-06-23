@@ -30,6 +30,7 @@ links:
     to: 'https://music.youtube.com/playlist?list=OLAK5uy_kz94JY5oJegSq4i3tfS9xKLA-ewaVIddQ'
     options:
       - 'stream'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw6qalv24"
 ---
 
 ## Everything that doesn't 'belong' somewhere. Full of failures, rejects, and firsts.

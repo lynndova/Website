@@ -1,0 +1,15 @@
+{
+  "$schema": "https://tangled.org/stevedylan.dev/sequoia/raw/main/sequoia.schema.json",
+  "siteUrl": "https://lynndova.com",
+  "contentDir": "./src/content/releases",
+  "publicDir": "./static",
+  "outputDir": "./svelte-kit/output",
+  "pathPrefix": "/release",
+  "publicationUri": "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.publication/3mowstoanle2i",
+  "frontmatter": {
+    "description": "summary",
+    "publishDate": "date",
+    "coverImage": "icon"
+  },
+  "publishContent": true
+}

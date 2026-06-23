@@ -43,6 +43,7 @@ collaborators:
   - name: 'Superkat32'
     icon: 'https://azalea.lynndova.com/people/superkat32/icon_512x.png'
     url: 'https://modrinth.com/user/Superkat32'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw5u3a52n"
 ---
 
 ## ModFest: Toybox was a Minecraft modding event where participants had one goal: to make a toy!

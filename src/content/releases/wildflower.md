@@ -35,6 +35,7 @@ links:
     to: 'https://music.youtube.com/playlist?list=OLAK5uy_ld-PlUMjF5GJYewECwkJanLxSgCbHF1mU'
     options:
       - 'stream'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw6uxtr26"
 ---
 
 ## You've got to start somewhere.

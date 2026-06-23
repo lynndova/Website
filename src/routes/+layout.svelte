@@ -1,5 +1,4 @@
 <script lang="ts">
-	import HairlineSeparator from '$lib/ui/HairlineSeparator.svelte';
 	import { deepMerge, MetaTags } from 'svelte-meta-tags';
 	import '@fontsource-variable/dm-sans';
 	import '@fontsource-variable/inter';

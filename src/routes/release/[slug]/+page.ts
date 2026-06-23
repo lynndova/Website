@@ -15,7 +15,13 @@ export async function load({ url, data }) {
 					url: new URL(data.release.metadata.icon, url.origin).href
 				}
 			]
-		}
+		},
+		additionalLinkTags: [
+			{
+				rel: 'site.standard.document',
+				href: data.release.metadata.atUri ?? ''
+			}
+		]
 	} satisfies MetaTagsProps);
 
 	return {

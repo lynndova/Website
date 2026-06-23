@@ -35,6 +35,7 @@ links:
     to: 'https://music.youtube.com/playlist?list=OLAK5uy_kfxGveoWuDtMsPY-U4SvqfQBnrzbwfFlY'
     options:
       - 'stream'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw6m7xr23"
 ---
 
 ## You know what? Why not make something lovely?

@@ -26,3 +26,4 @@ vite.config.ts.timestamp-*
 /src/lib/colours.json
 /src/lib/releases.json
 /static/test.txt
+.sequoia-state.json

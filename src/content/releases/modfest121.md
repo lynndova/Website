@@ -44,6 +44,7 @@ collaborators:
   - name: 'Nulb'
     icon: 'https://azalea.lynndova.com/people/nulb/icon_512x.png'
     url: 'https://nulb.co.uk'
+atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw6gwon2i"
 ---
 
 ## Enjoy the tunes that line the time walls of Stasis!
