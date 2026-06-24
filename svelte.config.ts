@@ -17,7 +17,7 @@ const config: Config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		prerender: {
-			/* @ts-ignore */
+			// @ts-ignore
 			handleInvalidUrl: 'ignore' // AT Protocol URLs
 		}
 	}
