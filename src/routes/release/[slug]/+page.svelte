@@ -178,7 +178,10 @@
 			{/if}
 			{#if hasBandcamp}
 				<div class="flex w-fit flex-col gap-1">
-					<div class="bg-dova-background-secondary w-fit rounded-3xl border p-2">
+					<div
+						style="border-color: var(--release-dark-muted);"
+						class="bg-dova-background-secondary w-fit rounded-3xl border p-2"
+					>
 						<iframe
 							title="Bandcamp embed for {release.title}"
 							class="rounded-2xl"
@@ -204,7 +207,10 @@
 			{/if}
 			{#if hasYoutube}
 				<div class="flex w-fit flex-col gap-1">
-					<div class="bg-dova-background-secondary w-fit rounded-3xl border p-2">
+					<div
+						style="border-color: var(--release-dark-muted);"
+						class="bg-dova-background-secondary w-fit rounded-3xl border p-2"
+					>
 						<iframe
 							width="350"
 							height="197"
@@ -269,6 +275,9 @@
 {/if}
 
 <style>
+	* {
+		border-color: color-mix(in oklch, var(--release-dark-muted), transparent 66%);
+	}
 	thead > tr {
 		background-color: var(--release-dark-muted) !important;
 	}
