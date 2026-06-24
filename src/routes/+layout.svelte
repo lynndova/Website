@@ -20,7 +20,7 @@
 <div class="flex h-dvh flex-col">
 	<nav class="bg-dova-teal-4/10 flex w-full flex-row justify-center border-b">
 		<div
-			class="max-w-6xl] flex w-full flex-row items-center justify-center gap-4 p-6 sm:justify-between"
+			class="flex w-full max-w-6xl flex-row items-center justify-center gap-4 p-6 sm:justify-between"
 		>
 			<a
 				href="/"

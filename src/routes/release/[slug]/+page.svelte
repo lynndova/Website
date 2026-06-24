@@ -33,9 +33,15 @@
 </script>
 
 <div
-	style="--release-dark-muted: {rgbToHex(
-		...colour.palette.DarkMuted.rgb
-	)}; --release-dark-vibrant: {rgbToHex(...colour.palette.DarkVibrant.rgb)}"
+	style="
+	--release-accent: {release.colour}
+	--release-vibrant: {rgbToHex(...colour.palette.Vibrant.rgb)};
+	--release-dark-vibrant: {rgbToHex(...colour.palette.DarkVibrant.rgb)};
+	--release-light-vibrant: {rgbToHex(...colour.palette.LightVibrant.rgb)};
+	--release-muted: {rgbToHex(...colour.palette.Muted.rgb)};
+	--release-dark-muted: {rgbToHex(...colour.palette.DarkMuted.rgb)};
+	--release-light-muted: {rgbToHex(...colour.palette.LightMuted.rgb)};
+	"
 	class="flex flex-col gap-8 py-16 text-sm"
 >
 	<img
@@ -94,12 +100,12 @@
 						>. Check out these other fine folks who helped out with this!</span
 					>
 
-					<hr style="border-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}" />
+					<hr style="border-color: var(--release-dark-muted)" />
 
 					<div class="flex flex-row flex-wrap items-center gap-2">
 						{#each release.collaborators as collaborator}
 							<a
-								style="border-color: {rgbToHex(...colour.palette.DarkMuted.rgb)}AA"
+								style="border-color: color-mix(in oklch, var(--release-dark-muted) 66%, transparent);"
 								class="bg-dova-background-secondary flex flex-row items-center gap-4 rounded-2xl border px-3 py-1 no-underline! transition hover:brightness-80 active:scale-95"
 								target="_blank"
 								href={collaborator.url}
@@ -121,10 +127,10 @@
 			<h3 class="my-6! border-b" id="available-on">Available on</h3>
 
 			<div
-				style="background-color: color-mix(in oklch, var(--release-dark-muted) 30%, transparent);"
+				style="background-color: color-mix(in oklch, var(--release-dark-muted) 30%, transparent); border-color: var(--release-dark-muted);"
 				class="bg-dova-background-secondary mt-6 flex flex-col rounded-xl border px-4 py-3"
 			>
-				<table style="border-color: var(--release-dark-muted);">
+				<table>
 					<thead>
 						<tr>
 							<th class="text-lg">Service</th>
@@ -234,6 +240,7 @@
 		style="background: {getGradient(colour.palette)};"
 		class="bgimg pointer-events-none absolute top-0 left-0 z-[-2] h-[80%] w-full overflow-hidden object-cover opacity-35 blur-2xl saturate-200"
 	></div>
+
 	{#if dev}
 		<div class="flex flex-row flex-wrap">
 			<div

@@ -107,9 +107,9 @@
 	}
 
 	.tooltip-spirit {
-		@apply !bg-dova-background-secondary flex flex-col items-center !rounded-lg border text-sm shadow-2xl;
+		@apply bg-dova-background-secondary! flex flex-col items-center rounded-lg! border text-sm shadow-2xl;
 		.tip:before {
-			@apply !border-b-dova-border mx-[34.5%] mt-[-12px] hidden;
+			@apply border-b-dova-border! mx-[34.5%] -mt-3 hidden;
 		}
 	}
 

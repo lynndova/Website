@@ -4,7 +4,7 @@ slug: 'modfest-26-animation-affection-academia-original-modpack-soundtrack'
 icon: 'https://azalea.lynndova.com/releases/2026/mf26/cover_512x.png'
 date: '2026-05-29'
 summary: "it's (anime) highschool (romance)!"
-colour: '#6b533f'
+colour: '#9b6c46'
 links:
   - name: 'Bandcamp'
     options:
@@ -46,7 +46,7 @@ collaborators:
   - name: 'Superkat32'
     icon: 'https://azalea.lynndova.com/people/superkat32/icon_512x.png'
     url: 'https://modrinth.com/user/Superkat32'
-atUri: "at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw5oxze2s"
+atUri: 'at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3mowsw5oxze2s'
 ---
 
 writeup coming soon!
