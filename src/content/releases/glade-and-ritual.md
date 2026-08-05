@@ -10,6 +10,22 @@ links:
       - 'download'
       - 'stream'
     to: 'https://lynndova.bandcamp.com/album/glade-and-ritual'
+  - name: 'Apple Music'
+    options:
+      - 'stream'
+    to: 'https://music.apple.com/ca/album/glade-and-ritual/6798273163'
+  - name: 'Spotify'
+    options:
+      - 'stream'
+    to: 'https://open.spotify.com/album/10FC3oodVy5q5dMFwz9m5r'
+  - name: 'TIDAL'
+    options:
+      - 'stream'
+    to: 'https://tidal.com/album/549385717'
+  - name: 'YouTube Music'
+    options:
+      - 'stream'
+    to: 'https://music.youtube.com/playlist?list=OLAK5uy_mIqdI10g6-i2e6V0oD9cbnH6LDRzJLh2A'
 atUri: 'at://did:plc:j7wnmtxbfvvcokkweqir36p7/site.standard.document/3msd4zlwcdl25'
 ---
 
