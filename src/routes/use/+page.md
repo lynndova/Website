@@ -4,17 +4,18 @@ Thank you for your interest! I hope this can quickly answer any questions you mi
 
 ---
 
-_Updated 2025-10-04_
+_Updated 2026-08-05_
 <br>
 First and foremost, I reserve all rights to my music. (I just feel more comfortable releasing it in this
 way)
 
 The details are pretty simple:
 
-- You must provide attribution to me (lynndova)
-- You may not reupload my music verbatim
+- You must provide attribution to me (lynndova).
+- You may not reupload my music verbatim.
 - You may use my music under the fair use doctrine, including but not limited to the following:
-  - Using my music in videos or streams
+  - Using my music in videos or streams.
+- My work must **under no circumstances** be used for training of artificial intelligence models.
 
 If it is not clear, I am not a lawyer. The terms outlined here are _usage guidelines_, not a license.
 

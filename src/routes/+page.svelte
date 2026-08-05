@@ -38,6 +38,7 @@
 	</span>
 	<hr class="w-full" />
 
+	<h3>the music</h3>
 	<div
 		class="grid w-fit auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 	>
