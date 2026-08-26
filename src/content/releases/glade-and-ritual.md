@@ -22,6 +22,10 @@ links:
     options:
       - 'stream'
     to: 'https://tidal.com/album/549385717'
+  - name: 'Qobuz'
+    options:
+      - 'stream'
+    to: 'https://www.qobuz.com/ca-en/album/glade-and-ritual-lynndova/xvqaprp97ielk'
   - name: 'YouTube Music'
     options:
       - 'stream'
